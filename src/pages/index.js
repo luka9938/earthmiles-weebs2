@@ -8,7 +8,11 @@ const inter = Inter({ subsets: ["latin"] });
 function Home() {
   return (
     <div className={styles.landingpage}>
-      <img src="image.jpg" alt="Background Image" className="Background-image"></img>
+      <img
+        src="image.jpg"
+        alt="Background Image"
+        className="Background-image"
+      ></img>
       <div className={styles.content}>
         <h1>Your heading</h1>
         <p>Your descriptive text goes here.</p>
