@@ -1,48 +1,47 @@
-/* src/App.css */
-
-.landingpage {
+.homeBody {
+  background-size: cover;
+  background-position: center;
+  color: #1e4959;
+  min-height: 100vh; /* Set a minimum height */
   position: relative;
-  height: 100vh;
-  text-align: center;
-  color: #fff; /* Set text color */
 }
 
-.background-image {
+.homeText h1 {
+  font-size: 8vw;
+  line-height: 1.5;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  margin: 0;
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensure the image covers the entire container */
+  top: 25%;
+  left: 10%;
 }
 
-.content {
+.homeText h2 {
+  font-size: 2vw;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 42%;
+  left: 10.4%;
 }
 
-.h1 {
-  font-size: 2.5em; /* Adjust the font size as needed */
-}
-
-.p {
-  font-size: 1.2em; /* Adjust the font size as needed */
-  margin-top: 20px;
-}
-
-.buttons {
-  margin-top: 30px;
+.buttonContainer {
+  position: absolute;
+  bottom: 18rem; /* Adjust the distance from the bottom as needed */
+  right: 10rem; /* Adjust the distance from the right as needed */
+  display: flex;
+  gap: 70px; /* Adjust the gap between buttons as needed */
 }
 
 .button {
-  display: inline-block;
-  padding: 10px 20px;
-  margin: 0 10px;
-  text-decoration: none;
-  color: #fff; /* Set button text color */
-  background-color: #3498db; /* Set button background color */
-  border-radius: 5px;
-  font-size: 1em;
+  background-color: #71a66f;
+  color: #fff;
+  padding: 20px 150px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #72bf6f; /* Change the background color on hover */
 }
