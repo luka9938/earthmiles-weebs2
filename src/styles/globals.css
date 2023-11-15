@@ -94,6 +94,22 @@ a {
   text-decoration: none;
 }
 
+h1 {
+  font-family: "SofiaPro";
+}
+
+h2 {
+  font-family: "SofiaPro";
+}
+
+h3 {
+  font-family: "SofiaPro";
+}
+
+p {
+  font-family: "SofiaPro";
+}
+
 @media (prefers-color-scheme: light) {
   html {
     color-scheme: light;
