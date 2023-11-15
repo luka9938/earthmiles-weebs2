@@ -1,19 +1,32 @@
 .h2 {
-  color: #000;
+  color: #20485f;
   font-size: 1.5rem;
 }
 
 .h3 {
   color: #000;
   text-align: left;
-  padding: 0em 1em 1em 1em;
-  font-size: 2rem;
+  padding: 0em 1em;
+  font-size: 1.5rem;
 }
 
 .p {
   color: #000;
   text-align: center;
   font-size: 1rem;
+}
+
+.ul {
+  width: 30vw;
+}
+
+.li {
+  color: #000;
+  text-align: left;
+  font-size: 1rem;
+  padding-bottom: 8px;
+  border-bottom: 4px solid #fff;
+  margin-bottom: 1em;
 }
 
 .grid_container {
@@ -27,14 +40,14 @@
 .big_element {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 90vh;
+  height: 100vh;
   grid-row: span 2;
   background-color: #f7f7f7;
   color: #fff;
   text-align: center;
   border-radius: 16px;
+  padding-top: 2em;
+  padding-bottom: 2em;
 }
 
 .small_element {
@@ -44,6 +57,12 @@
   color: #fff;
   text-align: center;
   border-radius: 16px;
+}
+
+.campaigns {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .circle_container {
