@@ -1,0 +1,32 @@
+/* styles.css */
+
+.yourFormClassName {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.formLabel {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.inputField,
+.textareaField {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+.submitButton {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submitButton:hover {
+  background-color: #45a049;
+}
