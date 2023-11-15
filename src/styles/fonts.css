@@ -1,7 +1,7 @@
 /* Regular style */
 @font-face {
   font-family: "SofiaPro";
-  src: url("./fonts/SofiaProFont/SofiaProMedium.ttf") format("ttf");
+  src: url("./fonts/SofiaProFont/SofiaProMedium.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -9,7 +9,7 @@
 /* Italic style */
 @font-face {
   font-family: "SofiaPro";
-  src: url("./fonts/SofiaProFont/SofiaProMedium-italic.ttf") format("ttf");
+  src: url("./fonts/SofiaProFont/SofiaProMedium-italic.ttf") format("truetype");
   font-weight: normal;
   font-style: italic;
 }
@@ -17,7 +17,7 @@
 /* Bold style */
 @font-face {
   font-family: "SofiaPro";
-  src: url("./fonts/SofiaProFont/SofiaProBold.ttf") format("ttf");
+  src: url("./fonts/SofiaProFont/SofiaProBold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }
@@ -25,7 +25,7 @@
 /* Bold Italic style */
 @font-face {
   font-family: "SofiaPro";
-  src: url("./fonts/SofiaProFont/SofiaProBold-Italic.ttf") format("ttf");
+  src: url("./fonts/SofiaProFont/SofiaProBold-Italic.ttf") format("truetype");
   font-weight: bold;
   font-style: italic;
 }
@@ -33,7 +33,7 @@
 /* SemiBold style */
 @font-face {
   font-family: "SofiaPro";
-  src: url("./fonts/SofiaProFont/SofiaProSemiBold.ttf") format("ttf");
+  src: url("./fonts/SofiaProFont/SofiaProSemiBold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
 }
