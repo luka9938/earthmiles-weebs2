@@ -1,3 +1,21 @@
+.h2 {
+  color: #000;
+  font-size: 1.5rem;
+}
+
+.h3 {
+  color: #000;
+  text-align: left;
+  padding: 0em 1em 1em 1em;
+  font-size: 2rem;
+}
+
+.p {
+  color: #000;
+  text-align: center;
+  font-size: 1rem;
+}
+
 .grid_container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -7,9 +25,13 @@
 }
 
 .big_element {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 90vh;
   grid-row: span 2;
-  background-color: #3498db;
+  background-color: #f7f7f7;
   color: #fff;
   text-align: center;
   border-radius: 16px;
@@ -18,8 +40,37 @@
 .small_element {
   padding-top: 2em;
   padding-bottom: 2em;
-  background-color: #2ecc71;
+  background-color: #f7f7f7;
   color: #fff;
   text-align: center;
   border-radius: 16px;
+}
+
+.circle_container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+
+.rotating_text {
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  animation: spin 5s linear infinite;
+  color: #000;
+}
+
+.profile {
+  display: flex;
+  padding: 0em 2em;
+  gap: 2em;
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
 }
