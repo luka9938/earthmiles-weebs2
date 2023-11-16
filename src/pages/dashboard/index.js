@@ -99,7 +99,7 @@ export default function Dashboard() {
         </article>
         <article className={styles.small_element}>
           <h2 className={styles.h2}>Want to try something new?</h2>
-          <Link href="./login">
+          <Link href="./newcampaign">
             <span className={styles.h2}>Start a new campaign here</span>
           </Link>
         </article>
