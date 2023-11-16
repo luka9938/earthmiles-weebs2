@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import styles from "./Home.module.css";
+import Link from "next/link";
 
 const App = () => {
   return (
@@ -8,8 +9,12 @@ const App = () => {
         <h1>Earth Miles</h1>
         <h2>Velkommen til Earth Miles for partner</h2>
         <div className={styles.buttonContainer}>
-          <button className={styles.button}>Login</button>
-          <button className={styles.button}>Sign Up</button>
+          <Link href="./login" className={styles.button}>
+            Login
+          </Link>
+          <Link href="./createaccount" className={styles.button}>
+            Sign Up
+          </Link>
         </div>
       </div>
     </div>

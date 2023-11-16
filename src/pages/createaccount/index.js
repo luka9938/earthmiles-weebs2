@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styles from "./create.module.css"; // Make sure to import your styles module
+import Link from "next/link";
 
 const CreateAccountForm = () => {
   const [name, setName] = useState("");
@@ -104,9 +105,9 @@ const CreateAccountForm = () => {
         />
       </label>
 
-      <button type="submit" className={styles.submitButton}>
+      <Link href="./dashboard" type="submit" className={styles.submitButton}>
         Create Account
-      </button>
+      </Link>
     </form>
   );
 };
