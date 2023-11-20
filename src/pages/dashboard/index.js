@@ -34,23 +34,29 @@ export default function Dashboard() {
   };
 
   return (
-    <main>
+    <main className={styles.background}>
       <article className={styles.grid_container}>
         <article className={styles.big_element}>
           {timeRemaining === 0 ? (
             <div>
               <h3 className={styles.h3}>Your Dashboard</h3>
-              <p className={styles.p}>Total sales from all campaigns</p>
-              <h2 className={styles.h2}>110 982 DKK</h2>
-              <p className={styles.p}>Redeemed discounts</p>
-              <h2 className={styles.h2}>186/200</h2>
+              <div className={styles.earnings}>
+                <div>
+                  <p className={styles.h4}>Total sales from all campaigns</p>
+                  <h2 className={styles.h2}>110 982 DKK</h2>
+                </div>
+                <div>
+                  <p className={styles.h4}>Redeemed discounts</p>
+                  <h2 className={styles.h2}>186/200</h2>
+                </div>
+              </div>
               <div className={styles.campaigns}>
-                <Link href="./dashboard/active">
+                <Link href="./dashboard/active" className={styles.active}>
                   <span className={styles.h2}>
                     Active <br />1
                   </span>
                 </Link>
-                <Link href="./dashboard/archive">
+                <Link href="./dashboard/archive" className={styles.archive}>
                   <span className={styles.h2}>
                     Archived <br />4
                   </span>
@@ -78,14 +84,8 @@ export default function Dashboard() {
           )}
         </article>
         <article className={styles.small_element}>
-          <h3 className={styles.h3}>Profile</h3>
+          <h3 className={styles.h3}>Your Earth Miles Partner Profile</h3>
           <section className={styles.profile}>
-            <section>
-              <img alt="Profile" />
-              <button>Edit</button>
-              <p className={styles.h2}>Wedo Aps</p>
-              <p className={styles.p}>Earth Miles Partner</p>
-            </section>
             <section>
               <ul className={styles.ul}>
                 <li className={styles.li}>Personal Info</li>
@@ -94,6 +94,11 @@ export default function Dashboard() {
                 <li className={styles.li}>Log Out</li>
                 <li className={styles.li}>Billing and invoices</li>
               </ul>
+            </section>
+            <section>
+              <img alt="Profile" />
+              <button>Edit</button>
+              <p className={styles.h2}>Wedo Aps</p>
             </section>
           </section>
         </article>
