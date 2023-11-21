@@ -1,7 +1,5 @@
-// LoginPage.jsx
-
-import React, { useState } from "react";
-import styles from "./LoginPage.module.css"; // Importer stylingmodulet
+import React, { useState, useEffect } from "react";
+import styles from "./LoginPage.module.css"; // Import stylingmodulet
 
 const LoginPage = () => {
   const [pin, setPin] = useState("");
@@ -43,10 +41,23 @@ const LoginPage = () => {
     console.log("Glemt PIN?"); // Implementer logik for glemt PIN her
   };
 
+  useEffect(() => {
+    document.body.classList.add(styles.bodyClass); // Add the class from your module
+    return () => {
+      // Remove the class when the component unmounts
+      document.body.classList.remove(styles.bodyClass);
+    };
+  }, []);
+
   return (
     <div className={styles.loginContainer}>
-      <h1>Earth Miles</h1>
-      <h3>For partners</h3>
+      <div className={styles.title}>
+        <h1>Earth Miles</h1>
+      </div>
+      <div className={styles.subtitle}>
+        {" "}
+        <h3>For partners</h3>
+      </div>
 
       {!isUserLoggedIn ? (
         <>
@@ -92,7 +103,7 @@ const LoginPage = () => {
               type="email"
               value={email}
               onChange={handleEmailChange}
-              className={styles.input}
+              className={styles.input} // Apply the .input class here
             />
           </div>
 
@@ -102,7 +113,7 @@ const LoginPage = () => {
               type="password"
               value={password}
               onChange={handlePasswordChange}
-              className={styles.input}
+              className={styles.input} // Apply the .input class here
             />
           </div>
 

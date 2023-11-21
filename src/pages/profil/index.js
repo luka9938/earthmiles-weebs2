@@ -29,7 +29,7 @@ const ProfilePage = () => {
       </div>
 
       <div className={styles.profileBox}>
-        <h2>Firmaprofil</h2>
+        <h2 className={styles.profileTitle}>Firmaprofil</h2>
         <div className={styles.formGroup}>
           <label className={styles.labelText}>Firmanavn:</label>
           <input

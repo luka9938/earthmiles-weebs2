@@ -1,13 +1,21 @@
 /* ProfilePage.module.css */
 
 .profileContainer {
+  max-width: 400px;
+  margin: 50px auto; /* Center the container with some top margin */
+  padding: 30px;
+  background-color: #1e5944;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
   display: flex;
-  justify-content: space-between;
-  padding: 20px;
+  flex-direction: column;
+  align-items: center;
 }
 
 .logoContainer {
-  flex: 1;
+  margin-bottom: 20px;
 }
 
 .logoContainer img {
@@ -16,50 +24,46 @@
 }
 
 .profileBox {
-  flex: 1;
-  padding: 20px;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  text-align: left;
 }
 
-.profileBox h2 {
+.profileTitle {
+  color: #fff;
   margin-bottom: 20px;
 }
 
 .formGroup {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
-.inputField {
-  width: 100%;
-  padding: 10px;
-  font-size: 14px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 5px;
-  margin-bottom: 15px;
-}
-
-.saveProfileButton {
-  padding: 10px 15px;
-  background-color: #4caf50;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 14px;
-  transition: background-color 0.3s ease;
-}
-
-.saveProfileButton:hover {
-  background-color: #45a049;
-}
 .labelText {
   display: block;
   font-size: 14px;
   margin-bottom: 5px;
-  color: #333;
+  color: #fff;
 }
+
+.inputField {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  box-sizing: border-box;
+}
+
+.saveProfileButton {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background-color: #2196f3;
+  color: white;
+}
+
+.saveProfileButton:hover {
+  background-color: #1565c0;
+}
+
+/* Add more styling as needed */

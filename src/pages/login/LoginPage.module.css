@@ -1,96 +1,46 @@
-/* LoginPage.module.css */
+.bodyClass {
+  /* Add styles for the body here */
+  background-color: #1e5944; /* Green background color for the page */
+  /* Add more styles as needed */
+}
 
 .loginContainer {
   max-width: 400px;
-  margin: auto;
+  margin: 30px auto; /* Center the container with some top margin */
   padding: 30px;
-  background-color: #ffffff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+  background-color: #fbfae8;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
+.title {
+  margin-bottom: 8px; /* Decreased margin-bottom for less space */
+  font-size: 24px;
+  color: #604a3a;
+}
+
+.subtitle {
+  margin-bottom: 18px; /* Decreased margin-bottom for less space */
+  font-size: 18px;
+  color: #604a3a;
+}
+
 .formGroup {
   margin-bottom: 20px;
+  color: #604a3a;
 }
 
 .label {
   display: block;
   font-size: 14px;
   margin-bottom: 5px;
-  color: #333;
+  color: #fbfae8; /* Set label color to white */
 }
-
-.pinInput {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 15px;
-}
-
-.pinDot {
-  width: 20px;
-  height: 20px;
-  background-color: #333;
-  border-radius: 50%;
-  margin: 0 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 16px;
-  color: #ffffff;
-}
-
-.hiddenInput {
-  display: none;
-}
-
-.buttonGroup {
-  margin-bottom: 15px;
-}
-
-.userButton,
-.adminButton {
+.input {
   width: 100%;
-  padding: 15px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.userButton {
-  background-color: #4caf50;
-  color: white;
-}
-
-.adminButton {
-  background-color: #2196f3;
-  color: white;
-}
-
-.errorMessage {
-  color: red;
-  margin-top: 15px;
-}
-
-.forgotPin {
-  color: #333;
-  cursor: pointer;
-  text-decoration: underline;
-  margin-top: 15px;
-  display: block;
-  font-size: 14px;
-}
-.hiddenInput {
-  visibility: hidden;
-  width: 0;
-  height: 0;
-  margin: 0;
-  padding: 0;
-  border: none;
-  outline: none;
-  font-size: 16px; /* juster skriftstørrelsen efter behov */
+  padding: 12px; /* Increase padding for a larger input */
+  margin-top: 5px;
+  box-sizing: border-box; /* Ensure padding is included in the width */
 }
 
 .pinInput {
@@ -102,13 +52,62 @@
 .pinDot {
   width: 30px;
   height: 30px;
-  background-color: #333;
+  background-color: transparent;
   border-radius: 50%;
-  margin: 0 5px;
+  margin: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 16px;
-  color: #ffffff;
-  border: 1px solid #ddd; /* Tilføjet grænse for bedre synlighed */
+  color: #fbfae8;
+  border: 1px solid #ddd;
+}
+
+.hiddenInput {
+  display: none;
+}
+
+.buttonGroup {
+  margin-bottom: 20px; /* Increase margin for buttons */
+}
+
+.userButton,
+.adminButton {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 10px; /* Add margin between buttons */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.userButton {
+  background-color: #71a66f;
+  color: #fbfae8;
+}
+
+.adminButton {
+  background-color: #20485f;
+  color: #fbfae8;
+}
+
+.errorMessage {
+  color: red;
+  margin-top: 15px;
+}
+
+.forgotPin {
+  color: #fff; /* Set color to white */
+  cursor: pointer;
+  text-decoration: underline;
+  margin-top: 15px;
+  display: block;
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  .loginContainer {
+    max-width: 600px; /* Increase max-width for larger screens */
+  }
 }
