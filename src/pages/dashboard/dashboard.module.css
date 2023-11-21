@@ -92,22 +92,39 @@
   justify-content: center;
   height: 12em;
   width: 100%;
-  background-color: #fff;
   border-radius: 16px;
   background-image: url("/image30.png");
   background-size: cover;
 }
 
+.active_text {
+  padding: 1em 0;
+  height: 4em;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 16px;
+  color: #fff;
+  font-size: 3rem;
+}
 .archive {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 12em;
   width: 100%;
-  background-color: #fff;
   border-radius: 16px;
   background-image: url("/image1.png");
   background-size: cover;
+}
+
+.archive_text {
+  padding: 1em 0;
+  height: 4em;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 16px;
+  color: #fff;
+  font-size: 3rem;
 }
 
 .circle_container {
