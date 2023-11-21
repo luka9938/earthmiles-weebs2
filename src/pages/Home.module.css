@@ -1,35 +1,52 @@
 .homeBody {
   background-size: cover;
   background-position: center;
-  color: #1e4959;
+  background-color: #1e5944;
+  color: #fbfae8;
   min-height: 100vh; /* Set a minimum height */
   position: relative;
+  display: grid;
+  grid-template-rows: auto auto;
+}
+
+.homeText {
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 200px;
 }
 
 .homeText h1 {
-  font-size: 8vw;
-  line-height: 1.5;
+  font-size: 90px;
+  font-weight: bold;
+  font-family: gt;
+  line-height: 0.9;
   overflow-wrap: break-word;
   hyphens: auto;
   margin: 0;
-  position: absolute;
-  top: 25%;
-  left: 10%;
 }
 
-.homeText h2 {
-  font-size: 2vw;
+/* .homeText h2 {
+  font-size: 60px;
+  font-weight: bold;
+  font-family: gt;
   position: absolute;
-  top: 42%;
-  left: 10.4%;
+  top: 38%;
+  left: 10%;
+} */
+
+.homeText p {
+  font-size: 19px;
+  margin-top: 20px; /* Adjust as needed */
 }
 
 .buttonContainer {
-  position: absolute;
-  bottom: 18rem; /* Adjust the distance from the bottom as needed */
-  right: 10rem; /* Adjust the distance from the right as needed */
+  grid-row: 2;
   display: flex;
-  gap: 70px; /* Adjust the gap between buttons as needed */
+  justify-content: center;
+  margin-top: -400px;
+  margin-right: 400px;
 }
 
 .button {
@@ -38,8 +55,9 @@
   padding: 20px 150px;
   border: none;
   border-radius: 15px;
-  cursor: pointer;
   transition: background-color 0.3s;
+  cursor: pointer;
+  margin: auto 10px;
 }
 
 .button:hover {
