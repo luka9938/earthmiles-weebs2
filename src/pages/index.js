@@ -4,7 +4,13 @@ import Link from "next/link";
 
 const App = () => {
   return (
-    <div className={styles.homeBody} style={{ backgroundImage: "url(/foto2.jpeg)" }}>
+    <div className={styles.homeBody}>
+      <div className={styles.imageContainer}>
+        <img src={"/leftimage1.jpeg"} alt="Image1" className={styles.leftImage}></img>
+      </div>
+      <div className={styles.imageContainer}>
+        <img src={"/leftimage2.jpeg"} alt="Image2" className={styles.leftImage}></img>
+      </div>
       <div className={styles.homeText}>
         <h1>
           Earth Miles
