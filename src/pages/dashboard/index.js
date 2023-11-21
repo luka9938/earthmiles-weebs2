@@ -52,12 +52,12 @@ export default function Dashboard() {
               </div>
               <div className={styles.campaigns}>
                 <Link href="./dashboard/active" className={styles.active}>
-                  <span className={styles.h2}>
+                  <span className={styles.active_text}>
                     Active <br />1
                   </span>
                 </Link>
                 <Link href="./dashboard/archive" className={styles.archive}>
-                  <span className={styles.h2}>
+                  <span className={styles.archive_text}>
                     Archived <br />4
                   </span>
                 </Link>
