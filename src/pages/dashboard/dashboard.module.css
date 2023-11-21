@@ -1,48 +1,60 @@
 .h2 {
-  color: #20485f;
-  font-size: 1.5rem;
+  color: #604a3a;
+  font-size: 3rem;
 }
 
 .h3 {
-  color: #000;
+  color: #604a3a;
   text-align: left;
-  padding: 0em 1em;
+  padding: 0 1em 1em 1em;
+  font-size: 1.5rem;
+}
+
+.h4 {
+  color: #604a3a;
+  text-align: center;
   font-size: 1.5rem;
 }
 
 .p {
-  color: #000;
+  color: #604a3a;
   text-align: center;
   font-size: 1rem;
 }
 
 .ul {
-  width: 30vw;
+  width: 25vw;
 }
 
 .li {
-  color: #000;
+  color: #604a3a;
   text-align: left;
   font-size: 1rem;
   padding-bottom: 8px;
-  border-bottom: 4px solid #fff;
+  border-bottom: 4px solid #1e5944;
   margin-bottom: 1em;
+}
+
+.background {
+  background-image: url("/image18.png");
+  background-size: cover;
 }
 
 .grid_container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  gap: 2em;
-  padding: 20px;
+  gap: 3em;
+  padding: 4em;
+  background-color: rgba(30, 89, 68, 0.8);
+  height: 100%;
 }
 
 .big_element {
   display: flex;
   flex-direction: column;
-  height: 100vh;
   grid-row: span 2;
-  background-color: #f7f7f7;
+  background-color: #fbfae8;
   color: #fff;
   text-align: center;
   border-radius: 16px;
@@ -53,16 +65,66 @@
 .small_element {
   padding-top: 2em;
   padding-bottom: 2em;
-  background-color: #f7f7f7;
+  background-color: #fbfae8;
   color: #fff;
   text-align: center;
   border-radius: 16px;
 }
 
+.earnings {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 5em 2em;
+}
+
 .campaigns {
   display: flex;
+  padding: 2em;
+  gap: 3em;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: flex-end;
+}
+
+.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 12em;
+  width: 100%;
+  border-radius: 16px;
+  background-image: url("/image30.png");
+  background-size: cover;
+}
+
+.active_text {
+  padding: 1em 0;
+  height: 4em;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 16px;
+  color: #fff;
+  font-size: 3rem;
+}
+.archive {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 12em;
+  width: 100%;
+  border-radius: 16px;
+  background-image: url("/image1.png");
+  background-size: cover;
+}
+
+.archive_text {
+  padding: 1em 0;
+  height: 4em;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 16px;
+  color: #fff;
+  font-size: 3rem;
 }
 
 .circle_container {
@@ -80,9 +142,9 @@
 }
 
 .profile {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   padding: 0em 2em;
-  gap: 2em;
 }
 
 @keyframes spin {
