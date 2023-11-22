@@ -1,7 +1,5 @@
-// ProfilePage.jsx
-
-import React, { useState } from "react";
-import styles from "./ProfilePage.module.css"; // Importer stylingmodulet
+import React, { useState, useEffect } from "react";
+import styles from "./ProfilePage.module.css"; // Import stylingmodulet
 
 const ProfilePage = () => {
   const [companyName, setCompanyName] = useState("");
@@ -11,8 +9,8 @@ const ProfilePage = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
 
   const handleSaveProfile = () => {
-    // Implementer logik for at gemme profiloplysninger
-    console.log("Gemmer profiloplysninger:", {
+    // Implement logic for saving profile information
+    console.log("Saving profile information:", {
       companyName,
       cvrNumber,
       companyURL,
@@ -21,16 +19,22 @@ const ProfilePage = () => {
     });
   };
 
+  useEffect(() => {
+    document.body.classList.add(styles.bodyClass);
+    return () => {
+      document.body.classList.remove(styles.bodyClass);
+    };
+  }, []);
+
   return (
     <div className={styles.profileContainer}>
       <div className={styles.logoContainer}>
-        {/* Stort logo her */}
-        <img src="stort_logo.jpg" alt="Logo" />
+        <img src="/wheel brown.png" alt="Logo" />
       </div>
 
       <div className={styles.profileBox}>
         <h2 className={styles.profileTitle}>Firmaprofil</h2>
-        <div className={styles.formGroup}>
+        <div className={`${styles.formGroup} ${styles.tallInputField}`}>
           <label className={styles.labelText}>Firmanavn:</label>
           <input
             type="text"
@@ -40,39 +44,43 @@ const ProfilePage = () => {
           />
         </div>
 
-        <div className={styles.formGroup}>
-          <label>CVR-nummer:</label>
+        <div className={`${styles.formGroup} ${styles.tallInputField}`}>
+          <label className={styles.labelText}>CVR-nummer:</label>
           <input
             type="text"
             value={cvrNumber}
             onChange={(e) => setCvrNumber(e.target.value)}
+            className={styles.inputField}
           />
         </div>
 
-        <div className={styles.formGroup}>
-          <label>Firma URL:</label>
+        <div className={`${styles.formGroup} ${styles.tallInputField}`}>
+          <label className={styles.labelText}>Firma URL:</label>
           <input
             type="text"
             value={companyURL}
             onChange={(e) => setCompanyURL(e.target.value)}
+            className={styles.inputField}
           />
         </div>
 
-        <div className={styles.formGroup}>
-          <label>Forretningsadresse:</label>
+        <div className={`${styles.formGroup} ${styles.tallInputField}`}>
+          <label className={styles.labelText}>Forretningsadresse:</label>
           <input
             type="text"
             value={businessAddress}
             onChange={(e) => setBusinessAddress(e.target.value)}
+            className={styles.inputField}
           />
         </div>
 
-        <div className={styles.formGroup}>
-          <label>Telefonnummer:</label>
+        <div className={`${styles.formGroup} ${styles.tallInputField}`}>
+          <label className={styles.labelText}>Telefonnummer:</label>
           <input
             type="text"
             value={phoneNumber}
             onChange={(e) => setPhoneNumber(e.target.value)}
+            className={styles.inputField}
           />
         </div>
 
