@@ -14,7 +14,8 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  padding: 180px;
+  padding: 130px;
+  margin-top: 40px;
 }
 
 .homeText h1 {
@@ -27,25 +28,48 @@
   margin: 0;
 }
 
-/* .homeText h2 {
-  font-size: 60px;
-  font-weight: bold;
-  font-family: gt;
-  position: absolute;
-  top: 38%;
-  left: 10%;
-} */
-
 .homeText p {
-  font-size: 19px;
-  margin-top: 20px; /* Adjust as needed */
+  font-size: 16px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+@keyframes moveUpDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
 }
 
 .leftImage {
-  width: 500px;
+  border: 2px solid #f2f2f2;
+  border-radius: 10px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  padding-bottom: 60px;
+  display: inline-block;
+  max-width: 20%;
   height: auto;
-  margin-left: 900px;
-  margin-bottom: 50px;
+  margin-left: 130vh;
+  margin-top: -100vh;
+  animation: moveUpDown 3s infinite;
+}
+
+.leftImage2 {
+  border: 2px solid #f2f2f2;
+  border-radius: 10px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  padding-bottom: 60px;
+  display: inline-block;
+  max-width: 20%;
+  height: auto;
+  margin-left: 105vh;
+  margin-top: -15vh;
+  animation: moveUpDown 3s infinite;
 }
 
 .buttonContainer {
@@ -53,20 +77,29 @@
   display: flex;
   justify-content: center;
   margin-top: -200px;
-  margin-right: 400px;
+  margin-right: 750px;
+  z-index: 999;
+}
+
+.buttonContainer {
+  grid-row: 2;
+  display: flex;
+  justify-content: center;
+  margin-right: 85vh;
 }
 
 .button {
-  background-color: #71a66f;
-  color: #fff;
-  padding: 20px 150px;
+  background-color: #fbfae8;
+  color: #1e4959;
+  cursor: pointer;
+  padding: 20px 100px;
   border: none;
   border-radius: 15px;
-  transition: background-color 0.3s;
-  cursor: pointer;
+  transition: background-color 0.4s;
   margin: auto 10px;
 }
 
 .button:hover {
-  background-color: #72bf6f; /* Change the background color on hover */
+  background-color: #72bf6f;
+  color: #fbfae8; /* Change the background color on hover */
 }
