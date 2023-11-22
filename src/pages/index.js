@@ -1,12 +1,28 @@
-import react from "react";
+import React, { useState } from "react";
 import styles from "./Home.module.css";
 import Link from "next/link";
 
 const App = () => {
+  const [clickCount, setClickCount] = useState(0);
+  const [leftImageSource, setleftimageSource] = useState("/leftimage1.jpeg");
+
+  const handleLeftImageClick = () => {
+    if (clickCount < 2) {
+      setClickCount(clickCount + 1);
+    } else {
+      setleftimageSource("/cutedog.jpg");
+    }
+  };
+
   return (
     <div className={styles.homeBody}>
       <div className={styles.imageContainer}>
-        <img src={"/leftimage1.jpeg"} alt="Image1" className={styles.leftImage}></img>
+        <img
+          src={leftImageSource}
+          alt="Image1"
+          className={styles.leftImage}
+          onClick={handleLeftImageClick}
+        ></img>
       </div>
 
       <div className={styles.imageContainer}>

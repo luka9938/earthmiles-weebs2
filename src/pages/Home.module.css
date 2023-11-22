@@ -34,6 +34,11 @@
   margin-bottom: 50px;
 }
 
+.imageContainer {
+  margin-top: -30vh;
+  z-index: 999;
+}
+
 @keyframes moveUpDown {
   0%,
   100% {
