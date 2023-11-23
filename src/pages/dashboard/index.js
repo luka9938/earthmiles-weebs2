@@ -83,7 +83,7 @@ export default function Dashboard() {
             </div>
           )}
         </article>
-        <article className={styles.small_element}>
+        <article className={styles.small_element1}>
           <h3 className={styles.h3}>Your Earth Miles Partner Profile</h3>
           <section className={styles.profile}>
             <section>
@@ -102,10 +102,12 @@ export default function Dashboard() {
             </section>
           </section>
         </article>
-        <article className={styles.small_element}>
+        <article className={styles.small_element2}>
           <h2 className={styles.h2}>Want to try something new?</h2>
           <Link href="./newcampaign">
-            <span className={styles.h2}>Start a new campaign here</span>
+            <span className={styles.newcampaign_btn}>
+              Start a new campaign here
+            </span>
           </Link>
         </article>
       </article>
