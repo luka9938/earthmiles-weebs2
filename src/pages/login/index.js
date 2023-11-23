@@ -1,7 +1,5 @@
-// LoginPage.jsx
-
-import React, { useState } from "react";
-import styles from "./LoginPage.module.css"; // Importer stylingmodulet
+import React, { useState, useEffect } from "react";
+import styles from "./LoginPage.module.css"; // Import styling module
 
 const LoginPage = () => {
   const [pin, setPin] = useState("");
@@ -12,9 +10,7 @@ const LoginPage = () => {
 
   const handlePinChange = (e) => {
     const inputValue = e.target.value;
-    if (/^\d*$/.test(inputValue) && inputValue.length <= 4) {
-      setPin(inputValue);
-    }
+    setPin(inputValue);
   };
 
   const handleEmailChange = (e) => {
@@ -33,26 +29,42 @@ const LoginPage = () => {
   const handleAdminLogin = () => {
     if (pin === "admin1234") {
       console.log("Admin login successful!");
-      // Implementer logik for admin-login her
+      // Implement logic for admin login here
     } else {
       setErrorMessage("Forkert PIN. Prøv igen.");
     }
   };
 
   const handleForgotPin = () => {
-    console.log("Glemt PIN?"); // Implementer logik for glemt PIN her
+    console.log("Glemt PIN?"); // Implement logic for forgotten PIN here
   };
+
+  useEffect(() => {
+    document.body.classList.add(styles.bodyClass);
+    return () => {
+      document.body.classList.remove(styles.bodyClass);
+    };
+  }, []);
 
   return (
     <div className={styles.loginContainer}>
-      <h1>Earth Miles</h1>
-      <h3>For partners</h3>
+      <div className={styles.title}>
+        <h1>Earth Miles</h1>
+      </div>
+      <div className={styles.subtitle}>
+        <h3>For partners</h3>
+      </div>
 
       {!isUserLoggedIn ? (
         <>
           <div className={styles.formGroup}>
             <label>Indtast 4-cifret PIN:</label>
-            <div className={styles.pinInput}>
+            <div
+              id="pinInput"
+              className={`${styles.pinInput} ${
+                pin.length > 0 ? styles.hasContent : ""
+              }`}
+            >
               {Array.from({ length: 4 }, (_, index) => (
                 <div key={index} className={styles.pinDot}>
                   {index < pin.length ? "•" : ""}
@@ -84,7 +96,6 @@ const LoginPage = () => {
           </p>
         </>
       ) : (
-        // Vis indtastning af email og password, når brugeren er logget ind
         <>
           <div className={styles.formGroup}>
             <label>Email:</label>
@@ -107,7 +118,6 @@ const LoginPage = () => {
           </div>
 
           <div className={styles.buttonGroup}>
-            {/* Implementer logik for bruger-login her baseret på email og password */}
             <button
               className={styles.userButton}
               onClick={() => console.log("Login med email og password")}
