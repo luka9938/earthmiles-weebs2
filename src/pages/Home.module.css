@@ -1,8 +1,8 @@
 .homeBody {
   background-size: cover;
   background-position: center;
-  background-color: #1e5944;
-  color: #fbfae8;
+  /* background-color: #1e5944; */
+  color: #fff;
   min-height: 100vh; /* Set a minimum height */
   position: relative;
   display: grid;
