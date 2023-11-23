@@ -62,9 +62,21 @@
   padding-bottom: 2em;
 }
 
-.small_element {
+.small_element1 {
   padding-top: 2em;
   padding-bottom: 2em;
+  background-color: #fbfae8;
+  color: #fff;
+  text-align: center;
+  border-radius: 16px;
+}
+
+.small_element2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
   background-color: #fbfae8;
   color: #fff;
   text-align: center;
@@ -141,6 +153,22 @@
   color: #000;
 }
 
+.newcampaign_btn {
+  display: flex;
+  padding: 1em;
+  gap: 3em;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: #71a66f;
+  margin: 1em 2em 0 2em;
+  border-radius: 16px;
+  font-size: 2rem;
+}
+
+.newcampaign_btn:hover {
+  background-color: #1e5944;
+}
 .profile {
   display: grid;
   grid-template-columns: 1fr 1fr;

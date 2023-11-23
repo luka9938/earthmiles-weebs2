@@ -43,7 +43,6 @@
 .grid_container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
   gap: 3em;
   padding: 4em;
   background-color: rgba(30, 89, 68, 0.8);
@@ -54,10 +53,17 @@
 .big_element {
   display: flex;
   flex-direction: column;
-  grid-row: span 2;
   background-color: #fbfae8;
   text-align: center;
   border-radius: 16px;
   padding-top: 2em;
   padding-bottom: 2em;
+}
+
+.arrow {
+  border: 2px solid #604a3a;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(135deg);
 }
