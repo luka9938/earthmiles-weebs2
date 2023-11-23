@@ -56,7 +56,7 @@ export default function Dashboard() {
                     Active <br />1
                   </span>
                 </Link>
-                <Link href="./dashboard/archive" className={styles.archive}>
+                <Link href="./dashboard/active" className={styles.archive}>
                   <span className={styles.archive_text}>
                     Archived <br />4
                   </span>

@@ -1,0 +1,9 @@
+.big_element {
+  display: flex;
+  flex-direction: column;
+  background-color: #fbfae8;
+  text-align: center;
+  border-radius: 16px;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
