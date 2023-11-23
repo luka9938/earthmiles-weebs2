@@ -1,17 +1,13 @@
+// Import necessary dependencies
 import React, { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 import styles from "./LoginPage.module.css"; // Import styling module
 
 const LoginPage = () => {
-  const [pin, setPin] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [isUserLoggedIn, setIsUserLoggedIn] = useState(false);
-
-  const handlePinChange = (e) => {
-    const inputValue = e.target.value;
-    setPin(inputValue);
-  };
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -21,18 +17,15 @@ const LoginPage = () => {
     setPassword(e.target.value);
   };
 
+  // Use the useRouter hook
+  const router = useRouter();
+
   const handleUserLogin = () => {
     console.log("Fortsæt som bruger");
     setIsUserLoggedIn(true);
-  };
 
-  const handleAdminLogin = () => {
-    if (pin === "admin1234") {
-      console.log("Admin login successful!");
-      // Implement logic for admin login here
-    } else {
-      setErrorMessage("Forkert PIN. Prøv igen.");
-    }
+    // Redirect to the dashboard page
+    router.push("/dashboard"); // Replace "/dashboard" with the actual path of your dashboard page
   };
 
   const handleForgotPin = () => {
@@ -58,46 +51,6 @@ const LoginPage = () => {
       {!isUserLoggedIn ? (
         <>
           <div className={styles.formGroup}>
-            <label>Indtast 4-cifret PIN:</label>
-            <div
-              id="pinInput"
-              className={`${styles.pinInput} ${
-                pin.length > 0 ? styles.hasContent : ""
-              }`}
-            >
-              {Array.from({ length: 4 }, (_, index) => (
-                <div key={index} className={styles.pinDot}>
-                  {index < pin.length ? "•" : ""}
-                </div>
-              ))}
-            </div>
-            <input
-              type="password"
-              value={pin}
-              onChange={handlePinChange}
-              className={styles.hiddenInput}
-              maxLength="4"
-            />
-          </div>
-
-          <div className={styles.buttonGroup}>
-            <button className={styles.userButton} onClick={handleUserLogin}>
-              Fortsæt som bruger
-            </button>
-            <button className={styles.adminButton} onClick={handleAdminLogin}>
-              Indtast admin PIN
-            </button>
-          </div>
-
-          <p className={styles.errorMessage}>{errorMessage}</p>
-
-          <p className={styles.forgotPin} onClick={handleForgotPin}>
-            Glemt PIN?
-          </p>
-        </>
-      ) : (
-        <>
-          <div className={styles.formGroup}>
             <label>Email:</label>
             <input
               type="email"
@@ -118,12 +71,22 @@ const LoginPage = () => {
           </div>
 
           <div className={styles.buttonGroup}>
-            <button
-              className={styles.userButton}
-              onClick={() => console.log("Login med email og password")}
-            >
-              Log ind
+            <button className={styles.userButton} onClick={handleUserLogin}>
+              Fortsæt som bruger
             </button>
+          </div>
+
+          <p className={styles.errorMessage}>{errorMessage}</p>
+
+          <p className={styles.forgotPin} onClick={handleForgotPin}>
+            Glemt PIN?
+          </p>
+        </>
+      ) : (
+        <>
+          <div className={styles.formGroup}>
+            {/* Add user-specific content here after login */}
+            <p>User is logged in!</p>
           </div>
         </>
       )}
