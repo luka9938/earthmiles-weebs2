@@ -72,7 +72,7 @@ const LoginPage = () => {
 
           <div className={styles.buttonGroup}>
             <button className={styles.userButton} onClick={handleUserLogin}>
-              Fortsæt som bruger
+              Login
             </button>
           </div>
 
