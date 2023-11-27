@@ -101,7 +101,7 @@
   background-color: #72bf6f;
   color: #fbfae8; /* Change the background color on hover */
 
-.button52 {
+.button {
   font-size: 16px;
   font-weight: 200;
   letter-spacing: 1px;
@@ -116,7 +116,7 @@
   touch-action: manipulation;
 }
 
-.button52:after {
+.button:after {
   content: "";
   background-color: #1e593d;
   width: 100%;
@@ -128,13 +128,13 @@
   transition: 0.2s;
 }
 
-.button52:hover:after {
+.button:hover:after {
   top: 0px;
   left: 0px;
 }
 
 @media (min-width: 768px) {
-  .button52 {
+  .button {
     padding: 13px 50px 13px;
   }
 }
