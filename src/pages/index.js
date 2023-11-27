@@ -45,11 +45,12 @@ const App = () => {
         </p>
       </div>
       <div className={styles.buttonContainer}>
-        <Link href="./login" className={styles.button}>
-          Login
+        <Link href="./createaccount" className={styles.button} role="button">
+          Button 52
         </Link>
-        <Link href="./createaccount" className={styles.button}>
-          Sign Up
+
+        <Link href="./login" className={styles.button} role="button">
+          Button 52
         </Link>
       </div>
     </div>
