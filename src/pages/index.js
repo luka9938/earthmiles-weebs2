@@ -46,11 +46,11 @@ const App = () => {
       </div>
       <div className={styles.buttonContainer}>
         <Link href="./createaccount" className={styles.button} role="button">
-          Button 52
+          Opret en konto
         </Link>
 
         <Link href="./login" className={styles.button} role="button">
-          Button 52
+          Login
         </Link>
       </div>
     </div>
