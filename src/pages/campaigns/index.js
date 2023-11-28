@@ -1,9 +1,9 @@
-import styles from "./active.module.css";
+import styles from "./campaigns.module.css";
 import Link from "next/link";
 import { useState } from "react";
 import CustomModal from "@/pages/components/DashboardPopup/DashboardPopup";
 
-export default function Active() {
+export default function Campaigns() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => {
