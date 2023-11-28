@@ -86,7 +86,7 @@ const LoginPage = () => {
         <>
           <div className={styles.formGroup}>
             {/* Add user-specific content here after login */}
-            <p>User is logged in!</p>
+            <p>Velkommen</p>
           </div>
         </>
       )}
