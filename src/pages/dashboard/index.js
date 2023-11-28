@@ -38,7 +38,7 @@ export default function Dashboard() {
       <article className={styles.grid_container}>
         <article className={styles.big_element}>
           {timeRemaining === 0 ? (
-            <div>
+            <>
               <h3 className={styles.h3}>Your Dashboard</h3>
               <div className={styles.earnings}>
                 <div>
@@ -62,25 +62,28 @@ export default function Dashboard() {
                   </span>
                 </Link>
               </div>
-            </div>
+            </>
           ) : (
-            <div>
+            <>
               <div className={styles.circle_container}>
-                <h1 className={styles.rotating_text}>
-                  Earth Miles. Earth Miles. Earth Miles.
-                </h1>
+                <div
+                  className={styles.rotating_text}
+                  style={{ backgroundImage: "url(/logo1.png)" }}
+                ></div>
               </div>
-              <h2 className={styles.h2}>
-                Hold on tight while we are verifying your business
-              </h2>
-              <p className={styles.p}>
-                You'll be notified via Email when it has been reviewed; this can
-                take up to {getFormattedTime()}.
-              </p>
-              <p className={styles.p}>
-                In the meantime, why not start creating your first campaign?
-              </p>
-            </div>
+              <div className={styles.verifying_container}>
+                <h2 className={styles.h2}>
+                  Hold on tight while we are verifying your business
+                </h2>
+                <p className={styles.p}>
+                  You'll be notified via Email when it has been reviewed; this
+                  can take up to {getFormattedTime()}.
+                </p>
+                <p className={styles.p}>
+                  In the meantime, why not start creating your first campaign?
+                </p>
+              </div>
+            </>
           )}
         </article>
         <article className={styles.small_element1}>
