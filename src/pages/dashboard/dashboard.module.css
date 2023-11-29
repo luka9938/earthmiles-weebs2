@@ -1,12 +1,13 @@
 .h2 {
   color: #604a3a;
   font-size: 3rem;
+  padding: 0.5em 0;
 }
 
 .h3 {
   color: #604a3a;
   text-align: left;
-  padding: 0 1em 1em 1em;
+  padding: 0 1em 1em 0;
   font-size: 1.5rem;
 }
 
@@ -23,7 +24,7 @@
 }
 
 .ul {
-  width: 25vw;
+  width: 100%;
 }
 
 .li {
@@ -36,7 +37,7 @@
 }
 
 .background {
-  background-image: url("/image18.png");
+  background-image: url("/placeholder1.jpg");
   background-size: cover;
 }
 
@@ -55,20 +56,17 @@
   display: flex;
   flex-direction: column;
   grid-row: span 2;
-  background-color: #fbfae8;
-  text-align: center;
+  background-color: #f2f2f2;
   border-radius: 16px;
-  padding-top: 2em;
-  padding-bottom: 2em;
+  padding: 2em;
+  text-align: center;
 }
-
 .small_element1 {
-  padding-top: 2em;
-  padding-bottom: 2em;
-  background-color: #fbfae8;
+  background-color: #f2f2f2;
   color: #fff;
   text-align: center;
   border-radius: 16px;
+  padding: 2em;
 }
 
 .small_element2 {
@@ -77,7 +75,7 @@
   align-items: center;
   justify-content: center;
   padding: 2em;
-  background-color: #fbfae8;
+  background-color: #f2f2f2;
   color: #fff;
   text-align: center;
   border-radius: 16px;
@@ -86,7 +84,12 @@
 .earnings {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 5em 2em;
+  padding: 2em 0;
+}
+
+.verifying_container {
+  padding-top: 2em;
+  text-align: center;
 }
 
 .campaigns {
@@ -120,8 +123,6 @@
 }
 .archive {
   display: flex;
-  align-items: center;
-  justify-content: center;
   height: 12em;
   width: 100%;
   border-radius: 16px;
@@ -141,16 +142,17 @@
 
 .circle_container {
   position: relative;
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
+  width: 400px;
+  height: 400px;
+  margin: 2em auto;
 }
 
 .rotating_text {
-  transform: translate(-50%, -50%);
   white-space: nowrap;
-  animation: spin 5s linear infinite;
+  animation: spin 10s linear infinite;
   color: #000;
+  height: 100%;
+  background-size: cover;
 }
 
 .newcampaign_btn {
@@ -161,7 +163,7 @@
   align-items: center;
   justify-content: flex-end;
   background-color: #71a66f;
-  margin: 1em 2em 0 2em;
+  margin: 0 1em 0 1em;
   border-radius: 16px;
   font-size: 2rem;
 }
@@ -172,14 +174,13 @@
 .profile {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 0em 2em;
 }
 
 @keyframes spin {
   0% {
-    transform: translate(-50%, -50%) rotate(0deg);
+    transform: rotate(0deg);
   }
   100% {
-    transform: translate(-50%, -50%) rotate(360deg);
+    transform: rotate(360deg);
   }
 }
