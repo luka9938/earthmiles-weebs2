@@ -1,6 +1,5 @@
 import { useState } from "react";
 import styles from "./create.module.css";
-import Link from "next/link";
 
 const CreateAccountForm = () => {
   const [name, setName] = useState("");
@@ -23,7 +22,6 @@ const CreateAccountForm = () => {
           <div className={styles.left} style={{ backgroundImage: "url(/leftimage2.jpeg)" }}></div>
           <div className={styles.right}>
             <h2 className={styles.h2}>Opret en konto</h2>
-
             <label className={styles.label}>
               <input
                 placeholder="Firmanavn"
