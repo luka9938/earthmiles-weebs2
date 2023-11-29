@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import styles from "./LoginPage.module.css"; // Import styling module
+import styles from "./LoginPage.module.css";
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
