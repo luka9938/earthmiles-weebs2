@@ -1,17 +1,17 @@
 import styles from "./campaigns.module.css";
 import Link from "next/link";
 import { useState } from "react";
-import CustomModal from "@/pages/components/DashboardPopup/DashboardPopup";
+import PopUp from "@/pages/components/DashboardPopup/DashboardPopup";
 
 export default function Campaigns() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
 
-  const openModal = () => {
-    setIsModalOpen(true);
+  const togglePopup = () => {
+    setShowPopup(true);
   };
 
-  const closeModal = () => {
-    setIsModalOpen(false);
+  const closePopup = () => {
+    setShowPopup(false);
   };
 
   return (
@@ -21,9 +21,9 @@ export default function Campaigns() {
           <Link href="/dashboard">
             <span className={styles.arrow}></span>
           </Link>
-          <button onClick={() => openModal()}>Kampagne 1</button>
+          <button onClick={() => togglePopup()}>Kampagne 1</button>
         </article>
-        <CustomModal isOpen={isModalOpen}>
+        <PopUp isOpen={showPopup}>
           <h3 className={styles.h2}>Kampagne 1</h3>
           <h3 className={styles.h2}>50% på din entré</h3>
           <section>
@@ -34,8 +34,8 @@ export default function Campaigns() {
             <p className={styles.p}>Earth Miles optjent</p>
             <p className={styles.p}>1139</p>
           </section>
-          <button onClick={closeModal}>Luk Modal</button>
-        </CustomModal>
+          <button onClick={closePopup}>Luk Modal</button>
+        </PopUp>
       </article>
     </main>
   );
