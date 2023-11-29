@@ -92,7 +92,7 @@ const LoginPage = () => {
           <p className={styles.errorMessage}>{errorMessage}</p>
 
           <p className={styles.forgetPassword} onClick={forgetPassword}>
-            Glemt paasword?
+            Glemt password?
           </p>
         </>
       ) : (
