@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./DashboardPopup.module.css";
 
-const CustomModal = ({ isOpen, onRequestClose, children }) => {
+const PopUp = ({ isOpen, onRequestClose, children }) => {
   if (!isOpen) {
     return null;
   }
@@ -13,4 +13,4 @@ const CustomModal = ({ isOpen, onRequestClose, children }) => {
   );
 };
 
-export default CustomModal;
+export default PopUp;
