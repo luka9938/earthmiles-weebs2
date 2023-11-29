@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styles from "./create.module.css";
+import Link from "next/link";
 
 const CreateAccountForm = () => {
   const [name, setName] = useState("");
@@ -112,6 +113,10 @@ const CreateAccountForm = () => {
             <button href="./login" className={styles.button}>
               Login
             </button>
+
+            <Link href="./" className={styles.button}>
+              Back
+            </Link>
           </div>
         </div>
       </div>

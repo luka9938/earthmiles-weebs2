@@ -120,6 +120,8 @@
   border-radius: 5px;
   transition: all 0.3s ease-in-out;
   margin: -0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .button:hover {
