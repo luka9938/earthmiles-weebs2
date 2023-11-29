@@ -1,4 +1,3 @@
-// Import necessary dependencies
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import styles from "./LoginPage.module.css"; // Import styling module
@@ -9,27 +8,36 @@ const LoginPage = () => {
   const [errorMessage, setErrorMessage] = useState("");
   const [isUserLoggedIn, setIsUserLoggedIn] = useState(false);
 
-  const handleEmailChange = (e) => {
+  const emailChange = (e) => {
     setEmail(e.target.value);
   };
 
-  const handlePasswordChange = (e) => {
+  const passwordChange = (e) => {
     setPassword(e.target.value);
   };
 
-  // Use the useRouter hook
   const router = useRouter();
 
-  const handleUserLogin = () => {
+  const userLogin = () => {
+    if (email.trim() === "" || password.trim() === "") {
+      setErrorMessage("Email og password skal udfyldes");
+      return;
+    }
+
     console.log("Fortsæt som bruger");
     setIsUserLoggedIn(true);
 
-    // Redirect to the dashboard page
     router.push("/dashboard"); // Replace "/dashboard" with the actual path of your dashboard page
   };
 
-  const handleForgotPin = () => {
-    console.log("Glemt PIN?"); // Implement logic for forgotten PIN here
+  const userCreate = () => {
+    console.log();
+
+    router.push("/");
+  };
+
+  const forgetPassword = () => {
+    console.log("Glemt Password?");
   };
 
   useEffect(() => {
@@ -55,8 +63,9 @@ const LoginPage = () => {
             <input
               type="email"
               value={email}
-              onChange={handleEmailChange}
+              onChange={emailChange}
               className={styles.input}
+              required
             />
           </div>
 
@@ -65,21 +74,25 @@ const LoginPage = () => {
             <input
               type="password"
               value={password}
-              onChange={handlePasswordChange}
+              onChange={passwordChange}
               className={styles.input}
+              required
             />
           </div>
 
-          <div className={styles.buttonGroup}>
-            <button className={styles.userButton} onClick={handleUserLogin}>
+          <div className={styles.buttonContainer}>
+            <button className={styles.button} onClick={userLogin}>
               Login
+            </button>
+            <button className={styles.button} onClick={userCreate}>
+              Back
             </button>
           </div>
 
           <p className={styles.errorMessage}>{errorMessage}</p>
 
-          <p className={styles.forgotPin} onClick={handleForgotPin}>
-            Glemt PIN?
+          <p className={styles.forgetPassword} onClick={forgetPassword}>
+            Glemt password?
           </p>
         </>
       ) : (
