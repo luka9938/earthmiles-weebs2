@@ -32,8 +32,8 @@ const LoginPage = () => {
 
   const userCreate = () => {
     console.log();
-    setIsUserLoggedIn(true);
-    router.push("/login");
+
+    router.push("/");
   };
 
   const forgetPassword = () => {
