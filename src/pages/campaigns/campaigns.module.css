@@ -5,8 +5,6 @@
 
 .h3 {
   color: #604a3a;
-  text-align: left;
-  padding: 0 1em 1em 1em;
   font-size: 1.5rem;
 }
 
@@ -18,7 +16,6 @@
 
 .p {
   color: #604a3a;
-  text-align: center;
   font-size: 1rem;
 }
 
@@ -53,11 +50,11 @@
 .big_element {
   display: flex;
   flex-direction: column;
-  background-color: #fbfae8;
+  background-color: #f2f2f2;
   text-align: center;
   border-radius: 16px;
-  padding-top: 2em;
-  padding-bottom: 2em;
+  padding: 2em;
+  box-shadow: 0 0 19px 5px rgba(0, 0, 0, 0.19);
 }
 
 .arrow {
@@ -66,4 +63,35 @@
   display: inline-block;
   padding: 3px;
   transform: rotate(135deg);
+}
+.earnings {
+  display: flex;
+  flex-direction: column;
+  padding-top: 2em;
+}
+.campaign {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 12em;
+  width: 100%;
+  border-radius: 16px;
+  background-image: url("/image30.png");
+  background-size: cover;
+  border: none;
+}
+
+.campaign_text {
+  padding: 1em 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 16px;
+  color: #fff;
+  font-size: 3rem;
+  font-family: "Sofia Sans";
+}
+
+.campaign_container {
+  padding: 2em;
 }
