@@ -112,9 +112,9 @@
   background-size: cover;
 }
 
-.active_text {
+.campaign_text {
   padding: 1em 0;
-  height: 4em;
+  height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.6);
   border-radius: 16px;
@@ -129,17 +129,6 @@
   background-image: url("/image1.png");
   background-size: cover;
 }
-
-.archive_text {
-  padding: 1em 0;
-  height: 4em;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  border-radius: 16px;
-  color: #fff;
-  font-size: 3rem;
-}
-
 .circle_container {
   position: relative;
   width: 400px;
