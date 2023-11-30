@@ -22,7 +22,7 @@ export default function Campaigns() {
             <span className={styles.arrow}></span>
           </Link>
           <button className={styles.campaign} onClick={() => togglePopup()}>
-            Kampagne 1
+            <span className={styles.campaign_text}>Kampagne 1</span>
           </button>
         </article>
         <PopUp isOpen={showPopup}>
@@ -31,16 +31,15 @@ export default function Campaigns() {
           <section>
             <div className={styles.earnings}>
               <p className={styles.p}>samlet salg fra denne kampagne</p>
-              <p className={styles.p}>11.000</p>
+              <p className={styles.h3}>11.000</p>
               <p className={styles.p}>indløste rabatter</p>
-              <p className={styles.p}>290/500</p>
+              <p className={styles.h3}>290/500</p>
             </div>
             <div className={styles.earnings}>
               <p className={styles.p}>Earth Miles optjent</p>
-              <p className={styles.p}>1139</p>
+              <p className={styles.h3}>1139</p>
             </div>
           </section>
-          <button onClick={closePopup}>Luk Modal</button>
         </PopUp>
       </article>
     </main>

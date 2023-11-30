@@ -5,8 +5,6 @@
 
 .h3 {
   color: #604a3a;
-  text-align: left;
-  padding: 0 1em 1em 1em;
   font-size: 1.5rem;
 }
 
@@ -56,6 +54,7 @@
   text-align: center;
   border-radius: 16px;
   padding: 2em;
+  box-shadow: 0 0 19px 5px rgba(0, 0, 0, 0.19);
 }
 
 .arrow {
@@ -65,16 +64,10 @@
   padding: 3px;
   transform: rotate(135deg);
 }
-
 .earnings {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 2em 0;
-  text-align: left;
-}
-
-.earnings:nth-child(even) {
-  text-align: right;
+  display: flex;
+  flex-direction: column;
+  padding-top: 2em;
 }
 .campaign {
   display: flex;
@@ -86,4 +79,14 @@
   background-image: url("/image30.png");
   background-size: cover;
   border: none;
+}
+
+.campaign_text {
+  padding: 1em 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 16px;
+  color: #fff;
+  font-size: 3rem;
 }
