@@ -1,7 +1,7 @@
 import styles from "./campaigns.module.css";
 import Link from "next/link";
 import { useState } from "react";
-import PopUp from "@/pages/components/DashboardPopup/DashboardPopup";
+import PopUp from "@/components/DashboardPopup/DashboardPopup";
 
 export default function Campaigns() {
   const [showPopup, setShowPopup] = useState(false);
