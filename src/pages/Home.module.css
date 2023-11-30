@@ -1,7 +1,12 @@
 .homeBody {
   background-size: cover;
   background-position: center;
-  /* background-color: #1e5944; */
+}
+
+.homeBodyShadow {
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
   min-height: 100vh;
   height: auto;
