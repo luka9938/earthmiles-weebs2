@@ -21,9 +21,11 @@ export default function Campaigns() {
           <Link href="/dashboard">
             <span className={styles.arrow}></span>
           </Link>
-          <button className={styles.campaign} onClick={() => togglePopup()}>
-            <span className={styles.campaign_text}>Kampagne 1</span>
-          </button>
+          <section className={styles.campaign_container}>
+            <button className={styles.campaign} onClick={() => togglePopup()}>
+              <span className={styles.campaign_text}>Kampagne 1</span>
+            </button>
+          </section>
         </article>
         <PopUp isOpen={showPopup}>
           <h3 className={styles.h2}>Kampagne 1</h3>
