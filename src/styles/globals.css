@@ -90,34 +90,34 @@ body {
 }
 
 a {
-  font-family: "SofiaPro";
+  font-family: "Sofia Sans", sans-serif;
   color: inherit;
   text-decoration: none;
 }
 li {
-  font-family: "SofiaPro";
+  font-family: "Sofia Sans", sans-serif;
   text-decoration: none;
   list-style: none;
 }
 ul {
-  font-family: "SofiaPro";
+  font-family: "Sofia Sans", sans-serif;
   text-decoration: none;
 }
 
 h1 {
-  font-family: "SofiaPro";
+  font-family: "Zilla Slab", serif;
 }
 
 h2 {
-  font-family: "SofiaPro";
+  font-family: "Zilla Slab", serif;
 }
 
 h3 {
-  font-family: "SofiaPro";
+  font-family: "Sofia Sans", sans-serif;
 }
 
 p {
-  font-family: "SofiaPro";
+  font-family: "Sofia Sans", sans-serif;
 }
 
 @media (prefers-color-scheme: light) {
