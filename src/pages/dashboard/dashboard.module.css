@@ -2,6 +2,7 @@
   color: #604a3a;
   font-size: 3rem;
   padding: 0.5em 0;
+  font-weight: bold;
 }
 
 .h3 {
@@ -60,6 +61,7 @@
   border-radius: 16px;
   padding: 2em;
   text-align: center;
+  box-shadow: 0 0 19px 5px rgba(0, 0, 0, 0.19);
 }
 .small_element1 {
   background-color: #f2f2f2;
@@ -67,6 +69,7 @@
   text-align: center;
   border-radius: 16px;
   padding: 2em;
+  box-shadow: 0 0 19px 5px rgba(0, 0, 0, 0.19);
 }
 
 .small_element2 {
@@ -79,6 +82,7 @@
   color: #fff;
   text-align: center;
   border-radius: 16px;
+  box-shadow: 0 0 19px 5px rgba(0, 0, 0, 0.19);
 }
 
 .earnings {
