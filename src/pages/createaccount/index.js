@@ -113,10 +113,6 @@ const CreateAccountForm = () => {
             <button href="./login" className={styles.button}>
               Login
             </button>
-
-            <Link href="./" className={styles.button}>
-              Back
-            </Link>
           </div>
         </div>
       </div>
