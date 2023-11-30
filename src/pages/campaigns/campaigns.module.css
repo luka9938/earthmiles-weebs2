@@ -18,7 +18,6 @@
 
 .p {
   color: #604a3a;
-  text-align: center;
   font-size: 1rem;
 }
 
@@ -53,11 +52,10 @@
 .big_element {
   display: flex;
   flex-direction: column;
-  background-color: #fbfae8;
+  background-color: #f2f2f2;
   text-align: center;
   border-radius: 16px;
-  padding-top: 2em;
-  padding-bottom: 2em;
+  padding: 2em;
 }
 
 .arrow {
@@ -66,4 +64,26 @@
   display: inline-block;
   padding: 3px;
   transform: rotate(135deg);
+}
+
+.earnings {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 2em 0;
+  text-align: left;
+}
+
+.earnings:nth-child(even) {
+  text-align: right;
+}
+.campaign {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 12em;
+  width: 100%;
+  border-radius: 16px;
+  background-image: url("/image30.png");
+  background-size: cover;
+  border: none;
 }
