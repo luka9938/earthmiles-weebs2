@@ -27,11 +27,11 @@ const LoginPage = () => {
     console.log("Fortsæt som bruger");
     setIsUserLoggedIn(true);
 
-    router.push("/dashboard"); // Replace "/dashboard" with the actual path of your dashboard page
+    router.push("/dashboard");
   };
 
   const userCreate = () => {
-    console.log();
+    console.log("Back to homepage");
 
     router.push("/");
   };
@@ -98,7 +98,7 @@ const LoginPage = () => {
       ) : (
         <>
           <div className={styles.formGroup}>
-            {/* Add user-specific content here after login */}
+            {}
             <p>Velkommen</p>
           </div>
         </>
