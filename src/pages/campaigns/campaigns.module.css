@@ -67,3 +67,20 @@
   padding: 3px;
   transform: rotate(135deg);
 }
+
+.earnings {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 2em 0;
+}
+
+.campaign {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 12em;
+  width: 100%;
+  border-radius: 16px;
+  background-image: url("/image30.png");
+  background-size: cover;
+}
