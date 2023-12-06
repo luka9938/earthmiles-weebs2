@@ -10,6 +10,7 @@ const NewCampaignData = () => {
     discount: "",
     commission: "",
     redemption: "",
+    link: "",
   });
 
   const router = useRouter();
@@ -25,7 +26,9 @@ const NewCampaignData = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    router.push(`/campaigns?name=${formData.name}&email=${formData.email}`);
+    router.push(
+      `/campaigns?name=${formData.name}&description=${formData.description}&price=${formData.price}&quantity=${formData.quantity}&discount=${formData.discount}&commission=${formData.commission}&redemption=${formData.redemption}&link=${formData.link}`
+    );
   };
 
   return (
