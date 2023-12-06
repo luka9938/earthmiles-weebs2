@@ -14,7 +14,16 @@ export default function Campaigns() {
   };
 
   const router = useRouter();
-  const { name, email } = router.query;
+  const {
+    name,
+    description,
+    price,
+    quantity,
+    discount,
+    commission,
+    redemption,
+    link,
+  } = router.query;
 
   return (
     <main className={styles.background}>
@@ -43,8 +52,8 @@ export default function Campaigns() {
         <PopUp isOpen={showPopup}>
           {popupContent === "Kampagne 1" && (
             <>
-              <h3 className={styles.h2}>Kampagne 1</h3>
-              <h3 className={styles.h2}>50% på din entré</h3>
+              <h1 className={styles.h1}>Kampagne 1</h1>
+              <h2 className={styles.h2}>50% på din entré</h2>
               <section>
                 <div className={styles.earnings}>
                   <p className={styles.p}>samlet salg fra denne kampagne</p>
@@ -56,13 +65,58 @@ export default function Campaigns() {
                   <p className={styles.p}>Earth Miles optjent</p>
                   <p className={styles.h3}>1139</p>
                 </div>
+                <div className={styles.earnings}>
+                  <p className={styles.p}>Original price</p>
+                  <p className={styles.h3}>250 kr</p>
+                </div>
+                <div className={styles.earnings}>
+                  <p className={styles.p}>Discount value</p>
+                  <p className={styles.h3}>50%</p>
+                </div>
+                <div className={styles.earnings}>
+                  <p className={styles.p}>EM commission (10%)</p>
+                  <p className={styles.h3}>1.100 kr</p>
+                </div>
+                <div className={styles.earnings}>
+                  <p className={styles.p}>Redemption Type</p>
+                  <p className={styles.h3}>QR code</p>
+                </div>
               </section>
             </>
           )}
           {popupContent === router.query.name && (
             <>
-              <h3 className={styles.h2}>fuck</h3>
-              <h3 className={styles.h2}>{popupContent.email}</h3>
+              <h1 className={styles.h1}>{name}</h1>
+              <h2 className={styles.h2}>{description}</h2>
+              <section>
+                <div className={styles.earnings}>
+                  <p className={styles.p}>samlet salg fra denne kampagne</p>
+                  <p className={styles.h3}>11.000</p>
+                  <p className={styles.p}>indløste rabatter</p>
+                  <p className={styles.h3}>10/{quantity}</p>
+                </div>
+                <div className={styles.earnings}>
+                  <p className={styles.p}>Earth Miles optjent</p>
+                  <p className={styles.h3}>1139</p>
+                </div>
+                <div className={styles.earnings}>
+                  <p className={styles.p}>Original price</p>
+                  <p className={styles.h3}>{price}</p>
+                </div>
+                <div className={styles.earnings}>
+                  <p className={styles.p}>Discount value</p>
+                  <p className={styles.h3}>{discount}</p>
+                </div>
+                <div className={styles.earnings}>
+                  <p className={styles.p}>EM commission (10%)</p>
+                  <p className={styles.h3}>{commission}</p>
+                </div>
+                <div className={styles.earnings}>
+                  <p className={styles.p}>Redemption Type</p>
+                  <p className={styles.h3}>{redemption}</p>
+                  <p className={styles.p}>{link}</p>
+                </div>
+              </section>
             </>
           )}
         </PopUp>
