@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
+import { createClient } from "@supabase/supabase-js";
 import styles from "./LoginPage.module.css";
 
 const LoginPage = () => {
@@ -18,43 +19,37 @@ const LoginPage = () => {
 
   const router = useRouter();
 
+  // Replace with your own Supabase URL and API key
+  const supabaseUrl = "https://ujhcuiladwpybdluglxv.supabase.co";
+  const supabaseKey =
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVqaGN1aWxhZHdweWJkbHVnbHh2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDE3Nzc3NjgsImV4cCI6MjAxNzM1Mzc2OH0.bH5WVpJzoaMOF4IuFzLZwoGSh_1ASshOgQ8IWYsLABc";
+  const supabase = createClient(supabaseUrl, supabaseKey);
+
   const userLogin = async () => {
     if (email.trim() === "" || password.trim() === "") {
-      setErrorMessage("Email og password skal udfyldes");
+      setErrorMessage("Email and password must be filled");
       return;
     }
 
-    // Use the login API to authenticate the user
     try {
-      const response = await fetch(
-        "https://earth-miles-backend.azurewebsites.net/api/user/login",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            email,
-            password,
-          }),
-        }
-      );
+      // Fetch the user from the "partners" table with the provided email and password
+      const { data, error } = await supabase
+        .from("partners")
+        .select("*")
+        .eq("firma_email", email)
+        .eq("password", password)
+        .single();
 
-      if (response.ok) {
-        // Assuming the API returns some indication of successful login
-        const responseData = await response.json();
-
-        if (responseData.success) {
-          console.log("Login successful!");
-          setIsUserLoggedIn(true);
-          router.push("/dashboard");
-        } else {
-          setErrorMessage("Invalid credentials");
-        }
+      if (error || !data) {
+        setErrorMessage("Invalid credentials");
+        console.error(
+          "Failed to login:",
+          error ? error.message : "User not found"
+        );
       } else {
-        const errorData = await response.json();
-        setErrorMessage(errorData.message || "Failed to login");
-        console.error("Failed to login:", response.status, response.statusText);
+        console.log("Login successful!");
+        setIsUserLoggedIn(true);
+        router.push("/dashboard");
       }
     } catch (error) {
       setErrorMessage("Error logging in");
@@ -68,7 +63,7 @@ const LoginPage = () => {
   };
 
   const forgetPassword = () => {
-    console.log("Glemt Password?");
+    console.log("Forgot Password?");
   };
 
   useEffect(() => {
@@ -76,7 +71,7 @@ const LoginPage = () => {
     return () => {
       document.body.classList.remove(styles.bodyClass);
     };
-  }, []);
+  }, []); // Empty dependency array ensures the effect runs once on mount
 
   return (
     <div className={styles.loginContainer}>
@@ -123,13 +118,13 @@ const LoginPage = () => {
           <p className={styles.errorMessage}>{errorMessage}</p>
 
           <p className={styles.forgetPassword} onClick={forgetPassword}>
-            Glemt password?
+            Forgot password?
           </p>
         </>
       ) : (
         <>
           <div className={styles.formGroup}>
-            <p>Velkommen</p>
+            <p>Welcome</p>
           </div>
         </>
       )}
