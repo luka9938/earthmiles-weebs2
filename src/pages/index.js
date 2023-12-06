@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "./Home.module.css";
 import Link from "next/link";
+import Menu from "@/components/Menu";
 
 const App = () => {
   const [clickCount, setClickCount] = useState(0);
@@ -16,6 +17,7 @@ const App = () => {
 
   return (
     <div className={styles.homeBody} style={{ backgroundImage: "url(/tog.jpg)" }}>
+      <Menu />
       <div className={styles.homeBodyShadow}>
         <div className={styles.imageContainer}>
           <img
