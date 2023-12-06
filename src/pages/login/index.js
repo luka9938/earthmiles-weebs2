@@ -18,21 +18,52 @@ const LoginPage = () => {
 
   const router = useRouter();
 
-  const userLogin = () => {
+  const userLogin = async () => {
     if (email.trim() === "" || password.trim() === "") {
       setErrorMessage("Email og password skal udfyldes");
       return;
     }
 
-    console.log("Fortsæt som bruger");
-    setIsUserLoggedIn(true);
+    // Use the login API to authenticate the user
+    try {
+      const response = await fetch(
+        "https://earth-miles-backend.azurewebsites.net/api/user/login",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            email,
+            password,
+          }),
+        }
+      );
 
-    router.push("/dashboard");
+      if (response.ok) {
+        // Assuming the API returns some indication of successful login
+        const responseData = await response.json();
+
+        if (responseData.success) {
+          console.log("Login successful!");
+          setIsUserLoggedIn(true);
+          router.push("/dashboard");
+        } else {
+          setErrorMessage("Invalid credentials");
+        }
+      } else {
+        const errorData = await response.json();
+        setErrorMessage(errorData.message || "Failed to login");
+        console.error("Failed to login:", response.status, response.statusText);
+      }
+    } catch (error) {
+      setErrorMessage("Error logging in");
+      console.error("Error logging in:", error.message);
+    }
   };
 
   const userCreate = () => {
     console.log("Back to homepage");
-
     router.push("/");
   };
 
@@ -98,7 +129,6 @@ const LoginPage = () => {
       ) : (
         <>
           <div className={styles.formGroup}>
-            {}
             <p>Velkommen</p>
           </div>
         </>
