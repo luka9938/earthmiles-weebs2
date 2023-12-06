@@ -104,6 +104,15 @@
   font-size: 14px;
   transition: all 0.3s ease-in-out;
 }
+.createAccount {
+  color: #232323;
+  cursor: pointer;
+  text-decoration: none;
+  margin-top: 5px;
+  display: block;
+  font-size: 14px;
+  transition: all 0.3s ease-in-out;
+}
 
 .forgetPassword:hover {
   letter-spacing: 1px;
@@ -112,6 +121,12 @@
   font-weight: bold;
 }
 
+.createAccount:hover {
+  letter-spacing: 1px;
+  transform: scale(1.3);
+  text-decoration: none;
+  font-weight: bold;
+}
 @media (min-width: 768px) {
   .loginContainer {
     max-width: 50%;

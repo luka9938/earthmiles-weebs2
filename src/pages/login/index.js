@@ -19,7 +19,6 @@ const LoginPage = () => {
 
   const router = useRouter();
 
-  // Replace with your own Supabase URL and API key
   const supabaseUrl = "https://ujhcuiladwpybdluglxv.supabase.co";
   const supabaseKey =
     "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVqaGN1aWxhZHdweWJkbHVnbHh2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDE3Nzc3NjgsImV4cCI6MjAxNzM1Mzc2OH0.bH5WVpJzoaMOF4IuFzLZwoGSh_1ASshOgQ8IWYsLABc";
@@ -32,7 +31,6 @@ const LoginPage = () => {
     }
 
     try {
-      // Fetch the user from the "partners" table with the provided email and password
       const { data, error } = await supabase
         .from("partners")
         .select("*")
@@ -66,12 +64,18 @@ const LoginPage = () => {
     console.log("Forgot Password?");
   };
 
+  const createUserPage = () => {
+    console.log("Navigate to Create User page");
+
+    router.push("/createaccount");
+  };
+
   useEffect(() => {
     document.body.classList.add(styles.bodyClass);
     return () => {
       document.body.classList.remove(styles.bodyClass);
     };
-  }, []); // Empty dependency array ensures the effect runs once on mount
+  }, []);
 
   return (
     <div className={styles.loginContainer}>
@@ -119,6 +123,11 @@ const LoginPage = () => {
 
           <p className={styles.forgetPassword} onClick={forgetPassword}>
             Forgot password?
+          </p>
+
+          {/* "Create User" text link */}
+          <p className={styles.createAccount} onClick={createUserPage}>
+            Create User
           </p>
         </>
       ) : (
