@@ -7,10 +7,14 @@ export default function Buyers({ data }) {
     <>
       <title>Find buyer | EDC</title>
 
-      <div className={styles.wrapper}>
-        <h1 className={styles.h1}>Create campaign</h1>
-        <NewCampaignData />
-      </div>
+      <main className={styles.background}>
+        <article className={styles.container}>
+          <div className={styles.headline}>
+            <h1 className={styles.h1}>Create campaign</h1>
+          </div>
+          <NewCampaignData />
+        </article>
+      </main>
     </>
   );
 }
