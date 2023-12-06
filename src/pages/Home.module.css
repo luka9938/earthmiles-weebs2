@@ -6,7 +6,7 @@
 .homeBodyShadow {
   background-size: cover;
   background-position: center;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.4);
   color: #fff;
   min-height: 100vh;
   height: auto;
@@ -20,6 +20,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
+  color: #f2f2f2;
   padding: 130px;
   margin-top: 40px;
   animation: introLoad 3s ease-in-out;
@@ -35,14 +36,16 @@
 }
 
 .homeText p {
-  font-size: 16px;
-  margin-top: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 30px;
   margin-bottom: 50px;
 }
 
 .imageContainer {
   margin-top: -30vh;
-  animation: introLoad 3s ease-in-out 1s;
+  opacity: 0;
+  animation: introLoad 3s ease-in-out 1s forwards;
   z-index: 999;
 }
 
@@ -57,7 +60,8 @@
   height: auto;
   margin-left: 130vh;
   margin-top: -100vh;
-  animation: moveUpDown 3s infinite;
+  box-shadow: 0px 0px 19px 5px rgba(0, 0, 0, 0.19);
+  animation: moveUpDown 3s infinite 4s;
 }
 
 .leftImage2 {
@@ -71,7 +75,8 @@
   height: auto;
   margin-left: 105vh;
   margin-top: -15vh;
-  animation: moveUpDown 3s infinite;
+  box-shadow: 0px 0px 19px 5px rgba(0, 0, 0, 0.19);
+  animation: moveUpDown 3s infinite 4s;
 }
 
 .buttonContainer {
@@ -81,6 +86,7 @@
   margin-left: 130px;
   margin-top: -200px;
   gap: 50px;
+  animation: introLoad 3s ease-in-out;
   z-index: 999;
 }
 
@@ -110,7 +116,7 @@
   border-radius: 5px;
   margin-bottom: 2 00px;
   outline: 0;
-  border: 1px solid black;
+  border: 1.5px solid black;
   cursor: pointer;
   position: relative;
   background-color: rgba(0, 0, 0, 0);
@@ -121,7 +127,7 @@
 
 .button:after {
   content: "";
-  background-color: #1e593d;
+  background-color: #71a66f;
   width: 100%;
   z-index: -1;
   position: absolute;
@@ -132,6 +138,7 @@
 }
 
 .button:hover:after {
+  background-color: #72bf6f;
   top: 0px;
   left: 0px;
 }

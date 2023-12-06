@@ -15,10 +15,7 @@ const App = () => {
   };
 
   return (
-    <div
-      className={styles.homeBody}
-      style={{ backgroundImage: "url(/tog.jpg)" }}
-    >
+    <div className={styles.homeBody} style={{ backgroundImage: "url(/tog.jpg)" }}>
       <div className={styles.homeBodyShadow}>
         <div className={styles.imageContainer}>
           <img
@@ -30,11 +27,7 @@ const App = () => {
         </div>
 
         <div className={styles.imageContainer}>
-          <img
-            src={"/leftimage2.jpeg"}
-            alt="Image2"
-            className={styles.leftImage2}
-          ></img>
+          <img src={"/leftimage2.jpeg"} alt="Image2" className={styles.leftImage2}></img>
         </div>
         <div className={styles.homeText}>
           <h1>
@@ -46,13 +39,11 @@ const App = () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit,
             <br />
             ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            <br /> quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo,
+            <br /> quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo,
             <br />
-            Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu.
-            <br /> Excepteur sint occaecat cupidatat non proident, sunt in culpa
-            qui officia deserunt.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu.
+            <br /> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+            deserunt.
           </p>
         </div>
         <div className={styles.buttonContainer}>
