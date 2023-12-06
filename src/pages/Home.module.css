@@ -6,7 +6,7 @@
 .homeBodyShadow {
   background-size: cover;
   background-position: center;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
   min-height: 100vh;
   height: auto;
@@ -35,8 +35,12 @@
   margin: 0;
 }
 
+.span {
+  color: #72bf6f;
+}
+
 .homeText p {
-  font-size: 20px;
+  font-size: 30px;
   font-weight: bold;
   margin-top: 30px;
   margin-bottom: 50px;

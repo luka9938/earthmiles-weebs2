@@ -10,6 +10,7 @@ const NewCampaignData = () => {
     discount: "",
     commission: "",
     redemption: "",
+    link: "",
   });
 
   const router = useRouter();
@@ -25,7 +26,9 @@ const NewCampaignData = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    router.push(`/campaigns?name=${formData.name}&email=${formData.email}`);
+    router.push(
+      `/campaigns?name=${formData.name}&description=${formData.description}&price=${formData.price}&quantity=${formData.quantity}&discount=${formData.discount}&commission=${formData.commission}&redemption=${formData.redemption}&link=${formData.link}`
+    );
   };
 
   return (
@@ -35,6 +38,7 @@ const NewCampaignData = () => {
         <label className={styles.label}>
           Campaign headline
           <input
+            className={styles.input}
             type="text"
             name="name"
             value={formData.name}
@@ -44,6 +48,7 @@ const NewCampaignData = () => {
         <label className={styles.label}>
           Description
           <input
+            className={styles.input}
             type="text"
             name="description"
             value={formData.description}
@@ -56,6 +61,7 @@ const NewCampaignData = () => {
         <label className={styles.label}>
           Original price
           <input
+            className={styles.input}
             type="text"
             name="price"
             value={formData.price}
@@ -65,6 +71,7 @@ const NewCampaignData = () => {
         <label className={styles.label}>
           Quantity offered
           <input
+            className={styles.input}
             type="text"
             name="quantity"
             value={formData.quantity}
@@ -74,6 +81,7 @@ const NewCampaignData = () => {
         <label className={styles.label}>
           Discount value (%)
           <input
+            className={styles.input}
             type="text"
             name="discount"
             value={formData.discount}
@@ -83,6 +91,7 @@ const NewCampaignData = () => {
         <label className={styles.label}>
           Potential EM commission (10%)
           <input
+            className={styles.input}
             type="text"
             name="commission"
             value={formData.commission}
@@ -94,9 +103,9 @@ const NewCampaignData = () => {
       <fieldset className={styles.fieldset}>
         <legend className={styles.h3}>Redemption Type</legend>
         <label className={styles.label}>
-          Option 1
+          OR code (we generate one for you)
           <div className={styles.checkbox}>
-            <input type="text" name="link" value={formData.link} />
+            <input className={styles.input} type="text" name="link" value={formData.link} />
             <input
               type="radio"
               name="redemption"
@@ -107,9 +116,9 @@ const NewCampaignData = () => {
           </div>
         </label>
         <label className={styles.label}>
-          Option 2
+          Direct link to workshop
           <div className={styles.checkbox}>
-            <input type="text" name="link" value={formData.link} />
+            <input className={styles.input} type="text" name="link" value={formData.link} />
             <input
               type="radio"
               name="redemption"
@@ -120,9 +129,9 @@ const NewCampaignData = () => {
           </div>
         </label>
         <label className={styles.label}>
-          Option 3
+          Promo code (CSV, Text File etc.)
           <div className={styles.checkbox}>
-            <input type="text" name="link" value={formData.link} />
+            <input className={styles.input} type="text" name="link" value={formData.link} />
             <input
               type="radio"
               name="redemption"
@@ -132,7 +141,9 @@ const NewCampaignData = () => {
             />
           </div>
         </label>
-        <button type="submit">Submit</button>
+        <button className={styles.button} type="submit">
+          Submit
+        </button>
       </fieldset>
     </form>
   );
