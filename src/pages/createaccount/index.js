@@ -12,8 +12,8 @@ const CreateAccountForm = () => {
   const [password, setPassword] = useState("");
   const [repeatPassword, setRepeatPassword] = useState("");
   const [error, setError] = useState("");
+  const [confirmationMessage, setConfirmationMessage] = useState("");
 
-  // Replace with your own Supabase URL and API key
   const supabaseUrl = "https://ujhcuiladwpybdluglxv.supabase.co";
   const supabaseKey =
     "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVqaGN1aWxhZHdweWJkbHVnbHh2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDE3Nzc3NjgsImV4cCI6MjAxNzM1Mzc2OH0.bH5WVpJzoaMOF4IuFzLZwoGSh_1ASshOgQ8IWYsLABc";
@@ -37,7 +37,6 @@ const CreateAccountForm = () => {
         setError(error.message);
         console.error("Error creating user:", error.message);
       } else {
-        // User created successfully, now update the user data in the database
         const { data, error: dataError } = await supabase
           .from("partners")
           .upsert([
@@ -62,7 +61,17 @@ const CreateAccountForm = () => {
             user,
             data
           );
-          // Redirect or perform any other desired action
+
+          setConfirmationMessage("User created successfully!");
+
+          setName("");
+          setNumber("");
+          setWebsite("");
+          setEmail("");
+          setCategory("");
+          setMessage("");
+          setPassword("");
+          setRepeatPassword("");
         }
       }
     } catch (error) {
@@ -173,6 +182,11 @@ const CreateAccountForm = () => {
               Opret konto
             </button>
             {error && <p className={styles.errorMessage}>{error}</p>}
+            {confirmationMessage && (
+              <p className={styles.confirmationMessage}>
+                {confirmationMessage}
+              </p>
+            )}
           </div>
         </div>
       </div>
