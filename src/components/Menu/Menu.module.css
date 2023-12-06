@@ -6,20 +6,26 @@
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.menu a {
+.links {
+  display: flex;
+}
+
+.links a {
   margin-right: 20px;
   text-decoration: none;
   color: #f2f2f2;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .logo img {
   max-height: 50px;
   transition: 0.2s;
+  cursor: pointer;
 }
 
 .logo:hover img {
-  transform: scale(1.5);
+  transform: scale(1.1);
 }
 
 .home,
@@ -34,4 +40,39 @@
 .dashboard:hover,
 .faq:hover {
   transform: scale(1.5);
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbutten {
+  background-color: #71a66f;
+  color: #f2f2f2;
+  border-radius: 5px;
+  padding: 10px;
+  margin-right: 50px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdowncontent {
+  display: none;
+  position: absolute;
+  border-radius: 5px;
+  background-color: #71a66f;
+  z-index: 1;
+}
+
+.dropdowncontent a {
+  color: #f2f2f2;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown:hover .dropdowncontent {
+  display: block;
 }

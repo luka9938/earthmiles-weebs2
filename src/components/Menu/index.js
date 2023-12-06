@@ -10,18 +10,22 @@ const Menu = () => {
           <img src="/logo1.png" alt="logo"></img>
         </Link>
       </div>
-      <Link className={styles.home} href="/">
-        Home
-      </Link>
-      <Link className={styles.profile} href="/profil">
-        Profile
-      </Link>
-      <Link className={styles.dashboard} href="/dashbord">
-        Support
-      </Link>
-      <Link className={styles.faq} href="/#">
-        FAQ
-      </Link>
+      <div className={styles.links}>
+        <div className={styles.dropdown}>
+          <button className={styles.dropbutten}>More</button>
+          <div className={styles.dropdowncontent}>
+            <Link className={styles.profile} href="/profil">
+              Profile
+            </Link>
+            <Link className={styles.dashboard} href="/dashbord">
+              Support
+            </Link>
+            <Link className={styles.faq} href="/#">
+              FAQ
+            </Link>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

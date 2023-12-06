@@ -94,21 +94,6 @@
   z-index: 999;
 }
 
-/* .button {
-  background-color: #fbfae8;
-  color: #1e4959;
-  cursor: pointer;
-  padding: 20px 100px;
-  border: none;
-  border-radius: 15px;
-  transition: background-color 0.4s;
-  margin: auto 10px;
-}
-
-.button:hover {
-  background-color: #72bf6f;
-  color: #fbfae8; /* Change the background color on hover */
-
 .button {
   display: flex;
   width: 18%;
@@ -163,15 +148,6 @@
   100% {
     opacity: 1;
     transform: scale(1);
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
   }
 }
 
