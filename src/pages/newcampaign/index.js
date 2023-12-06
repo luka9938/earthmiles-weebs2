@@ -2,11 +2,9 @@ import "react";
 import styles from "./campaign.module.css";
 import NewCampaignData from "@/components/NewCampaignData/NewCampaignData";
 
-export default function Buyers({ data }) {
+export default function NewCampaign() {
   return (
     <>
-      <title>Find buyer | EDC</title>
-
       <main className={styles.background}>
         <article className={styles.container}>
           <div className={styles.headline}>
