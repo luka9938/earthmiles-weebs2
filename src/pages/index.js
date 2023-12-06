@@ -31,19 +31,15 @@ const App = () => {
         </div>
         <div className={styles.homeText}>
           <h1>
-            Earth Miles
+            <span className={styles.span}>Earth Miles</span>
             <br />
             for partner
           </h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            join Earth miles og gør en forskel for <span className={styles.span}>miljøet!</span>
             <br />
-            ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            <br /> quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo,
-            <br />
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu.
-            <br /> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-            deserunt.
+            Promover din virksomhed til de tusindvis af rejsende,
+            <br /> der hver dag bruger <span className={styles.span}>bæredygtig</span> transport.
           </p>
         </div>
         <div className={styles.buttonContainer}>
