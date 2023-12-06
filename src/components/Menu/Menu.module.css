@@ -1,0 +1,37 @@
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.menu a {
+  margin-right: 20px;
+  text-decoration: none;
+  color: #f2f2f2;
+  font-weight: bold;
+}
+
+.logo img {
+  max-height: 50px;
+  transition: 0.2s;
+}
+
+.logo:hover img {
+  transform: scale(1.5);
+}
+
+.home,
+.profile,
+.dashboard,
+.faq {
+  transition: 0.2s;
+}
+
+.home:hover,
+.profile:hover,
+.dashboard:hover,
+.faq:hover {
+  transform: scale(1.5);
+}
