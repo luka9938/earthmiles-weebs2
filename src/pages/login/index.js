@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { createClient } from "@supabase/supabase-js";
 import styles from "./LoginPage.module.css";
+import Menu from "@/components/Menu";
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
@@ -39,10 +40,10 @@ const LoginPage = () => {
         .single();
 
       if (error || !data) {
-        setErrorMessage("Invalid credentials");
+        setErrorMessage("Ugyldige loginoplysninger");
         console.error(
           "Failed to login:",
-          error ? error.message : "User not found"
+          error ? error.message : "Bruger ikke fundet"
         );
       } else {
         console.log("Login successful!");
@@ -78,65 +79,68 @@ const LoginPage = () => {
   }, []);
 
   return (
-    <div className={styles.loginContainer}>
-      <div className={styles.title}>
-        <h1>Earth Miles</h1>
+    <div>
+      <Menu /> {/* Add the Menu component here */}
+      <div className={styles.loginContainer}>
+        <div className={styles.title}>
+          <h1>Earth Miles</h1>
+        </div>
+        <div className={styles.subtitle}>
+          <h3>For partners</h3>
+        </div>
+
+        {!isUserLoggedIn ? (
+          <>
+            <div className={styles.formGroup}>
+              <label>Email:</label>
+              <input
+                type="email"
+                value={email}
+                onChange={emailChange}
+                className={styles.input}
+                required
+              />
+            </div>
+
+            <div className={styles.formGroup}>
+              <label>Password:</label>
+              <input
+                type="password"
+                value={password}
+                onChange={passwordChange}
+                className={styles.input}
+                required
+              />
+            </div>
+
+            <div className={styles.buttonContainer}>
+              <button className={styles.button} onClick={userLogin}>
+                Login
+              </button>
+              <button className={styles.button} onClick={userCreate}>
+                Tilbage
+              </button>
+            </div>
+
+            <p className={styles.errorMessage}>{errorMessage}</p>
+
+            <p className={styles.forgetPassword} onClick={forgetPassword}>
+              Glemt kodeord?
+            </p>
+
+            {/* "Create User" text link */}
+            <p className={styles.createAccount} onClick={createUserPage}>
+              Opret bruger
+            </p>
+          </>
+        ) : (
+          <>
+            <div className={styles.formGroup}>
+              <p>Velkommen</p>
+            </div>
+          </>
+        )}
       </div>
-      <div className={styles.subtitle}>
-        <h3>For partners</h3>
-      </div>
-
-      {!isUserLoggedIn ? (
-        <>
-          <div className={styles.formGroup}>
-            <label>Email:</label>
-            <input
-              type="email"
-              value={email}
-              onChange={emailChange}
-              className={styles.input}
-              required
-            />
-          </div>
-
-          <div className={styles.formGroup}>
-            <label>Password:</label>
-            <input
-              type="password"
-              value={password}
-              onChange={passwordChange}
-              className={styles.input}
-              required
-            />
-          </div>
-
-          <div className={styles.buttonContainer}>
-            <button className={styles.button} onClick={userLogin}>
-              Login
-            </button>
-            <button className={styles.button} onClick={userCreate}>
-              Back
-            </button>
-          </div>
-
-          <p className={styles.errorMessage}>{errorMessage}</p>
-
-          <p className={styles.forgetPassword} onClick={forgetPassword}>
-            Forgot password?
-          </p>
-
-          {/* "Create User" text link */}
-          <p className={styles.createAccount} onClick={createUserPage}>
-            Create User
-          </p>
-        </>
-      ) : (
-        <>
-          <div className={styles.formGroup}>
-            <p>Welcome</p>
-          </div>
-        </>
-      )}
     </div>
   );
 };
