@@ -149,7 +149,7 @@ const CreateAccountForm = () => {
 
             <label className={styles.label}>
               <input
-                placeholder="Password"
+                placeholder="Kodeord"
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
@@ -160,7 +160,7 @@ const CreateAccountForm = () => {
 
             <label className={styles.label}>
               <input
-                placeholder="Repeat Password"
+                placeholder="Gentag kodeord"
                 type="password"
                 value={repeatPassword}
                 onChange={(e) => setRepeatPassword(e.target.value)}

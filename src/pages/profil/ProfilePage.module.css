@@ -8,7 +8,7 @@
   max-width: 600px;
   margin: 50px auto;
   padding: 40px;
-  background-color: #fbfae8;
+  background-color: #f2f2f2;
   border: 1px solid #ddd;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -64,7 +64,7 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
   background-color: #71a66f; /* Brown button color */
-  color: white;
+  color: #f2f2f2;
 }
 
 .saveProfileButton:hover {
