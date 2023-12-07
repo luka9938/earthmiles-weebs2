@@ -29,7 +29,7 @@ const App = () => {
         </div>
 
         <div className={styles.imageContainer}>
-          <img src={"/leftimage2.jpeg"} alt="Image2" className={styles.leftImage2}></img>
+          <img src={"/image30.png"} alt="Image2" className={styles.leftImage2}></img>
         </div>
         <div className={styles.homeText}>
           <h1>
