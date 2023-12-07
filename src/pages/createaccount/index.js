@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { createClient } from "@supabase/supabase-js";
 import styles from "./create.module.css";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 const CreateAccountForm = () => {
   const [name, setName] = useState("");
@@ -13,6 +15,7 @@ const CreateAccountForm = () => {
   const [repeatPassword, setRepeatPassword] = useState("");
   const [error, setError] = useState("");
   const [confirmationMessage, setConfirmationMessage] = useState("");
+  const router = useRouter();
 
   const supabaseUrl = "https://ujhcuiladwpybdluglxv.supabase.co";
   const supabaseKey =
@@ -78,6 +81,11 @@ const CreateAccountForm = () => {
       setError("Error creating user");
       console.error("Error creating user:", error.message);
     }
+  };
+
+  const createUserPage = () => {
+    // Navigate to the login page
+    router.push("/login");
   };
 
   return (
@@ -178,14 +186,20 @@ const CreateAccountForm = () => {
                 required
               />
             </label>
+
             <button type="submit" className={styles.button}>
               Opret konto
             </button>
             {error && <p className={styles.errorMessage}>{error}</p>}
             {confirmationMessage && (
-              <p className={styles.confirmationMessage}>
-                {confirmationMessage}
-              </p>
+              <>
+                <p className={styles.confirmationMessage}>
+                  {confirmationMessage}
+                </p>
+                <Link href="/login">
+                  <span className={styles.loginLink}>Tilbage til login</span>
+                </Link>
+              </>
             )}
           </div>
         </div>
