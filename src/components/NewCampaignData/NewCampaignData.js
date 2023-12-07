@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
-import styles from "./NewCampaingData.module.css";
+import styles from "./NewCampaignData.module.css";
 const NewCampaignData = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -10,6 +10,7 @@ const NewCampaignData = () => {
     discount: "",
     commission: "",
     redemption: "",
+    link: "",
   });
 
   const router = useRouter();
@@ -25,7 +26,9 @@ const NewCampaignData = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    router.push(`/campaigns?name=${formData.name}&email=${formData.email}`);
+    router.push(
+      `/campaigns?name=${formData.name}&description=${formData.description}&price=${formData.price}&quantity=${formData.quantity}&discount=${formData.discount}&commission=${formData.commission}&redemption=${formData.redemption}&link=${formData.link}`
+    );
   };
 
   return (
@@ -102,7 +105,12 @@ const NewCampaignData = () => {
         <label className={styles.label}>
           OR code (we generate one for you)
           <div className={styles.checkbox}>
-            <input className={styles.input} type="text" name="link" value={formData.link} />
+            <input
+              className={styles.input}
+              type="text"
+              name="link"
+              value={formData.link}
+            />
             <input
               type="radio"
               name="redemption"
@@ -115,7 +123,12 @@ const NewCampaignData = () => {
         <label className={styles.label}>
           Direct link to workshop
           <div className={styles.checkbox}>
-            <input className={styles.input} type="text" name="link" value={formData.link} />
+            <input
+              className={styles.input}
+              type="text"
+              name="link"
+              value={formData.link}
+            />
             <input
               type="radio"
               name="redemption"
@@ -128,7 +141,12 @@ const NewCampaignData = () => {
         <label className={styles.label}>
           Promo code (CSV, Text File etc.)
           <div className={styles.checkbox}>
-            <input className={styles.input} type="text" name="link" value={formData.link} />
+            <input
+              className={styles.input}
+              type="text"
+              name="link"
+              value={formData.link}
+            />
             <input
               type="radio"
               name="redemption"

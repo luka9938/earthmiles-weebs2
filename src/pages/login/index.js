@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
+import { createClient } from "@supabase/supabase-js";
 import styles from "./LoginPage.module.css";
 
 const LoginPage = () => {
@@ -18,26 +19,55 @@ const LoginPage = () => {
 
   const router = useRouter();
 
-  const userLogin = () => {
+  const supabaseUrl = "https://ujhcuiladwpybdluglxv.supabase.co";
+  const supabaseKey =
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVqaGN1aWxhZHdweWJkbHVnbHh2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDE3Nzc3NjgsImV4cCI6MjAxNzM1Mzc2OH0.bH5WVpJzoaMOF4IuFzLZwoGSh_1ASshOgQ8IWYsLABc";
+  const supabase = createClient(supabaseUrl, supabaseKey);
+
+  const userLogin = async () => {
     if (email.trim() === "" || password.trim() === "") {
-      setErrorMessage("Email og password skal udfyldes");
+      setErrorMessage("Email and password must be filled");
       return;
     }
 
-    console.log("Fortsæt som bruger");
-    setIsUserLoggedIn(true);
+    try {
+      const { data, error } = await supabase
+        .from("partners")
+        .select("*")
+        .eq("firma_email", email)
+        .eq("password", password)
+        .single();
 
-    router.push("/dashboard");
+      if (error || !data) {
+        setErrorMessage("Invalid credentials");
+        console.error(
+          "Failed to login:",
+          error ? error.message : "User not found"
+        );
+      } else {
+        console.log("Login successful!");
+        setIsUserLoggedIn(true);
+        router.push("/dashboard");
+      }
+    } catch (error) {
+      setErrorMessage("Error logging in");
+      console.error("Error logging in:", error.message);
+    }
   };
 
   const userCreate = () => {
     console.log("Back to homepage");
-
     router.push("/");
   };
 
   const forgetPassword = () => {
-    console.log("Glemt Password?");
+    console.log("Forgot Password?");
+  };
+
+  const createUserPage = () => {
+    console.log("Navigate to Create User page");
+
+    router.push("/createaccount");
   };
 
   useEffect(() => {
@@ -92,14 +122,18 @@ const LoginPage = () => {
           <p className={styles.errorMessage}>{errorMessage}</p>
 
           <p className={styles.forgetPassword} onClick={forgetPassword}>
-            Glemt password?
+            Forgot password?
+          </p>
+
+          {/* "Create User" text link */}
+          <p className={styles.createAccount} onClick={createUserPage}>
+            Create User
           </p>
         </>
       ) : (
         <>
           <div className={styles.formGroup}>
-            {}
-            <p>Velkommen</p>
+            <p>Welcome</p>
           </div>
         </>
       )}

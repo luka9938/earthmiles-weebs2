@@ -1,6 +1,8 @@
 import { useState } from "react";
+import { createClient } from "@supabase/supabase-js";
 import styles from "./create.module.css";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const CreateAccountForm = () => {
   const [name, setName] = useState("");
@@ -10,19 +12,93 @@ const CreateAccountForm = () => {
   const [category, setCategory] = useState("");
   const [message, setMessage] = useState("");
   const [password, setPassword] = useState("");
+  const [repeatPassword, setRepeatPassword] = useState("");
+  const [error, setError] = useState("");
+  const [confirmationMessage, setConfirmationMessage] = useState("");
+  const router = useRouter();
 
-  const handleSubmit = (e) => {
+  const supabaseUrl = "https://ujhcuiladwpybdluglxv.supabase.co";
+  const supabaseKey =
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVqaGN1aWxhZHdweWJkbHVnbHh2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDE3Nzc3NjgsImV4cCI6MjAxNzM1Mzc2OH0.bH5WVpJzoaMOF4IuFzLZwoGSh_1ASshOgQ8IWYsLABc";
+  const supabase = createClient(supabaseUrl, supabaseKey);
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted:", { name, number, link, email, category, message });
+
+    if (password !== repeatPassword) {
+      setError("Passwords do not match");
+      return;
+    }
+
+    try {
+      const { user, error } = await supabase.auth.signUp({
+        email,
+        password,
+      });
+
+      if (error) {
+        setError(error.message);
+        console.error("Error creating user:", error.message);
+      } else {
+        const { data, error: dataError } = await supabase
+          .from("partners")
+          .upsert([
+            {
+              firmanavn: name,
+              registreringsnummer: number,
+              firma_hjemmeside: link,
+              virksomhedskategori: category,
+              firma_email: email,
+              password: password,
+              gentag_password: repeatPassword,
+              firma_bio: message,
+            },
+          ]);
+
+        if (dataError) {
+          setError(dataError.message);
+          console.error("Error updating user data:", dataError.message);
+        } else {
+          console.log(
+            "User created and data updated successfully:",
+            user,
+            data
+          );
+
+          setConfirmationMessage("User created successfully!");
+
+          setName("");
+          setNumber("");
+          setWebsite("");
+          setEmail("");
+          setCategory("");
+          setMessage("");
+          setPassword("");
+          setRepeatPassword("");
+        }
+      }
+    } catch (error) {
+      setError("Error creating user");
+      console.error("Error creating user:", error.message);
+    }
+  };
+
+  const createUserPage = () => {
+    // Navigate to the login page
+    router.push("/login");
   };
 
   return (
     <form onSubmit={handleSubmit}>
       <div className={styles.container}>
         <div className={styles.container_box}>
-          <div className={styles.left} style={{ backgroundImage: "url(/leftimage2.jpeg)" }}></div>
+          <div
+            className={styles.left}
+            style={{ backgroundImage: "url(/leftimage2.jpeg)" }}
+          ></div>
           <div className={styles.right}>
             <h2 className={styles.h2}>Opret en konto</h2>
+
             <label className={styles.label}>
               <input
                 placeholder="Firmanavn"
@@ -31,7 +107,7 @@ const CreateAccountForm = () => {
                 onChange={(e) => setName(e.target.value)}
                 className={styles.inputField}
                 required
-              ></input>
+              />
             </label>
 
             <label className={styles.label}>
@@ -42,7 +118,7 @@ const CreateAccountForm = () => {
                 onChange={(e) => setNumber(e.target.value)}
                 className={styles.inputField}
                 required
-              ></input>
+              />
             </label>
 
             <label className={styles.label}>
@@ -53,7 +129,7 @@ const CreateAccountForm = () => {
                 onChange={(e) => setWebsite(e.target.value)}
                 className={styles.inputField}
                 required
-              ></input>
+              />
             </label>
 
             <label className={styles.label}>
@@ -64,7 +140,7 @@ const CreateAccountForm = () => {
                 onChange={(e) => setCategory(e.target.value)}
                 className={styles.inputField}
                 required
-              ></input>
+              />
             </label>
 
             <label className={styles.label}>
@@ -75,7 +151,7 @@ const CreateAccountForm = () => {
                 onChange={(e) => setEmail(e.target.value)}
                 className={styles.inputField}
                 required
-              ></input>
+              />
             </label>
 
             <label className={styles.label}>
@@ -86,18 +162,18 @@ const CreateAccountForm = () => {
                 onChange={(e) => setPassword(e.target.value)}
                 className={styles.inputField}
                 required
-              ></input>
+              />
             </label>
 
             <label className={styles.label}>
               <input
-                placeholder="Gentag password"
+                placeholder="Repeat Password"
                 type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
+                value={repeatPassword}
+                onChange={(e) => setRepeatPassword(e.target.value)}
                 className={styles.inputField}
                 required
-              ></input>
+              />
             </label>
 
             <label className={styles.label}>
@@ -108,11 +184,23 @@ const CreateAccountForm = () => {
                 onChange={(e) => setMessage(e.target.value)}
                 className={styles.textarea}
                 required
-              ></textarea>
+              />
             </label>
-            <button href="./login" className={styles.button}>
-              Login
+
+            <button type="submit" className={styles.button}>
+              Opret konto
             </button>
+            {error && <p className={styles.errorMessage}>{error}</p>}
+            {confirmationMessage && (
+              <>
+                <p className={styles.confirmationMessage}>
+                  {confirmationMessage}
+                </p>
+                <Link href="/login">
+                  <span className={styles.loginLink}>Tilbage til login</span>
+                </Link>
+              </>
+            )}
           </div>
         </div>
       </div>
