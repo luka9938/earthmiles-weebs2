@@ -7,10 +7,19 @@ import { useRouter } from "next/router";
 export default function Campaigns() {
   const [showPopup, setShowPopup] = useState(false);
   const [popupContent, setPopupContent] = useState(null);
+  const [selectedButton, setSelectedButton] = useState(null);
 
   const togglePopup = (content) => {
     setShowPopup(!showPopup);
     setPopupContent(content);
+  };
+
+  const handleButtonClick = (buttonName) => {
+    if (selectedButton === buttonName) {
+      setSelectedButton(null);
+    } else {
+      setSelectedButton(buttonName);
+    }
   };
 
   const router = useRouter();
@@ -34,15 +43,25 @@ export default function Campaigns() {
           </Link>
           <section className={styles.campaign_container}>
             <button
-              className={styles.campaign}
-              onClick={() => togglePopup("Kampagne 1")}
+              className={`${styles.campaign} ${
+                selectedButton === "Kampagne 1" ? styles.selected : ""
+              }`}
+              onClick={() => {
+                togglePopup("Kampagne 1");
+                handleButtonClick("Kampagne 1");
+              }}
             >
               <span className={styles.campaign_text}>Kampagne 1</span>
             </button>
             {name ? (
               <button
-                className={styles.campaign}
-                onClick={() => togglePopup(router.query.name)}
+                className={`${styles.campaign} ${
+                  selectedButton === router.query.name ? styles.selected : ""
+                }`}
+                onClick={() => {
+                  togglePopup(router.query.name);
+                  handleButtonClick(router.query.name);
+                }}
               >
                 <span className={styles.campaign_text}>{name}</span>
               </button>
