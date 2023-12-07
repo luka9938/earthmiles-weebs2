@@ -3,6 +3,7 @@ import { createClient } from "@supabase/supabase-js";
 import styles from "./create.module.css";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import Menu from "@/components/Menu";
 
 const CreateAccountForm = () => {
   const [name, setName] = useState("");
@@ -90,6 +91,7 @@ const CreateAccountForm = () => {
 
   return (
     <form onSubmit={handleSubmit}>
+      <Menu />
       <div className={styles.container}>
         <div className={styles.container_box}>
           <div
@@ -156,7 +158,7 @@ const CreateAccountForm = () => {
 
             <label className={styles.label}>
               <input
-                placeholder="Password"
+                placeholder="Kodeord"
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
@@ -167,7 +169,7 @@ const CreateAccountForm = () => {
 
             <label className={styles.label}>
               <input
-                placeholder="Repeat Password"
+                placeholder="Gentag kodeord"
                 type="password"
                 value={repeatPassword}
                 onChange={(e) => setRepeatPassword(e.target.value)}
