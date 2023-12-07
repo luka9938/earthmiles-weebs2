@@ -148,6 +148,14 @@
   background-size: cover;
 }
 
+.logo {
+  background-size: contain;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  margin: auto;
+}
+
 .newcampaign_btn {
   display: flex;
   padding: 1em;
