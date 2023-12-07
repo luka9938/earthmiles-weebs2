@@ -94,7 +94,11 @@ export default function Dashboard() {
             <section className={styles.profile}>
               <section>
                 <ul className={styles.ul}>
-                  <li className={styles.li}>Personal Info</li>
+                  <li className={styles.li}>
+                    <Link href="./profil" className={styles.p}>
+                      Personal info
+                    </Link>
+                  </li>
                   <li className={styles.li}>How it works</li>
                   <li className={styles.li}>Contact support</li>
                   <li className={styles.li}>
