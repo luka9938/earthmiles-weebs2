@@ -26,7 +26,7 @@ const CreateAccountForm = () => {
     e.preventDefault();
 
     if (password !== repeatPassword) {
-      setError("Passwords do not match");
+      setError("Kodeord matcher ikke");
       return;
     }
 
@@ -65,7 +65,7 @@ const CreateAccountForm = () => {
             data
           );
 
-          setConfirmationMessage("User created successfully!");
+          setConfirmationMessage("Succes! Bruger oprettet");
 
           setName("");
           setNumber("");
@@ -190,7 +190,11 @@ const CreateAccountForm = () => {
             <button type="submit" className={styles.button}>
               Opret konto
             </button>
-            {error && <p className={styles.errorMessage}>{error}</p>}
+            {error && (
+              <p className={styles.errorMessage} style={{ color: "red" }}>
+                {error}
+              </p>
+            )}
             {confirmationMessage && (
               <>
                 <p className={styles.confirmationMessage}>
