@@ -16,7 +16,7 @@ const App = () => {
   };
 
   return (
-    <div className={styles.homeBody} style={{ backgroundImage: "url(/tog.jpg)" }}>
+    <div className={styles.homeBody} style={{ backgroundImage: "url(/placeholder1.jpg)" }}>
       <Menu />
       <div className={styles.homeBodyShadow}>
         <div className={styles.imageContainer}>
