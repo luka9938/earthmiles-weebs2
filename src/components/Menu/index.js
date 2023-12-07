@@ -12,7 +12,7 @@ const Menu = () => {
       </div>
       <div className={styles.links}>
         <div className={styles.dropdown}>
-          <button className={styles.dropbutten}>More</button>
+          <button className={styles.dropbutten}>Menu</button>
           <div className={styles.dropdowncontent}>
             <Link className={styles.profile} href="/profil">
               Profile

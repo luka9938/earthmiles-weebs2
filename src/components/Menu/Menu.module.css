@@ -16,6 +16,7 @@
   color: #f2f2f2;
   font-weight: bold;
   cursor: pointer;
+  z-index: 99;
 }
 
 .logo img {
@@ -39,7 +40,7 @@
 .profile:hover,
 .dashboard:hover,
 .faq:hover {
-  transform: scale(1.5);
+  transform: scale(1.2);
 }
 
 .dropdown {
@@ -49,27 +50,75 @@
 
 .dropbutten {
   background-color: #71a66f;
+  border: 0 solid #e5e7eb;
+  box-sizing: border-box;
   color: #f2f2f2;
-  border-radius: 5px;
-  padding: 10px;
-  margin-right: 50px;
-  font-size: 16px;
-  border: none;
+  display: flex;
+  font-size: 1rem;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 1.75rem;
+  padding: 0.75rem 3.65rem;
+  margin-left: -40px;
+  position: relative;
+  text-align: center;
+  text-decoration: none #000000 solid;
+  text-decoration-thickness: auto;
+  width: 100%;
+  max-width: 460px;
+  position: relative;
   cursor: pointer;
+  transform: rotate(-2deg);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.dropbutten:focus {
+  outline: 0;
+}
+
+.dropbutten:after {
+  content: "";
+  position: absolute;
+  border: 1px solid #000000;
+  bottom: 4px;
+  left: 4px;
+  width: calc(100% - 1px);
+  height: calc(100% - 1px);
+}
+
+.dropbutten:hover:after {
+  bottom: 2px;
+  left: 2px;
 }
 
 .dropdowncontent {
   display: none;
   position: absolute;
-  border-radius: 5px;
+  margin-left: -37px;
+  margin-top: 9px;
+  transform: rotate(-2deg);
   background-color: #71a66f;
   z-index: 1;
+}
+
+.dropdowncontent:after {
+  content: "";
+  position: absolute;
+  border: 1px solid #000000;
+  bottom: 4px;
+  left: 4px;
+  width: calc(100% - 1px);
+  height: calc(100% - 1px);
+  z-index: -1;
 }
 
 .dropdowncontent a {
   color: #f2f2f2;
   padding: 12px 16px;
   text-decoration: none;
+  cursor: pointer;
   display: block;
 }
 
