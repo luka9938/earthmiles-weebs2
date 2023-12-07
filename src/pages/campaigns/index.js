@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useState } from "react";
 import PopUp from "@/components/DashboardPopup/DashboardPopup";
 import { useRouter } from "next/router";
+import Menu from "@/components/Menu";
 
 export default function Campaigns() {
   const [showPopup, setShowPopup] = useState(false);
@@ -23,19 +24,12 @@ export default function Campaigns() {
   };
 
   const router = useRouter();
-  const {
-    name,
-    description,
-    price,
-    quantity,
-    discount,
-    commission,
-    redemption,
-    link,
-  } = router.query;
+  const { name, description, price, quantity, discount, commission, redemption, link } =
+    router.query;
 
   return (
     <main className={styles.background}>
+      <Menu />
       <article className={styles.grid_container}>
         <article className={styles.big_element}>
           <Link href="/dashboard">

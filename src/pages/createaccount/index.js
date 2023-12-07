@@ -41,30 +41,24 @@ const CreateAccountForm = () => {
         setError(error.message);
         console.error("Error creating user:", error.message);
       } else {
-        const { data, error: dataError } = await supabase
-          .from("partners")
-          .upsert([
-            {
-              firmanavn: name,
-              registreringsnummer: number,
-              firma_hjemmeside: link,
-              virksomhedskategori: category,
-              firma_email: email,
-              password: password,
-              gentag_password: repeatPassword,
-              firma_bio: message,
-            },
-          ]);
+        const { data, error: dataError } = await supabase.from("partners").upsert([
+          {
+            firmanavn: name,
+            registreringsnummer: number,
+            firma_hjemmeside: link,
+            virksomhedskategori: category,
+            firma_email: email,
+            password: password,
+            gentag_password: repeatPassword,
+            firma_bio: message,
+          },
+        ]);
 
         if (dataError) {
           setError(dataError.message);
           console.error("Error updating user data:", dataError.message);
         } else {
-          console.log(
-            "User created and data updated successfully:",
-            user,
-            data
-          );
+          console.log("User created and data updated successfully:", user, data);
 
           setConfirmationMessage("Succes! Bruger oprettet");
 
@@ -94,10 +88,7 @@ const CreateAccountForm = () => {
       <Menu />
       <div className={styles.container}>
         <div className={styles.container_box}>
-          <div
-            className={styles.left}
-            style={{ backgroundImage: "url(/leftimage2.jpeg)" }}
-          ></div>
+          <div className={styles.left} style={{ backgroundImage: "url(/leftimage2.jpeg)" }}></div>
           <div className={styles.right}>
             <h2 className={styles.h2}>Opret en konto</h2>
 
@@ -199,9 +190,7 @@ const CreateAccountForm = () => {
             )}
             {confirmationMessage && (
               <>
-                <p className={styles.confirmationMessage}>
-                  {confirmationMessage}
-                </p>
+                <p className={styles.confirmationMessage}>{confirmationMessage}</p>
                 <Link href="/login">
                   <span className={styles.loginLink}>Tilbage til login</span>
                 </Link>
