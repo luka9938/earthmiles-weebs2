@@ -129,7 +129,7 @@ export default function Dashboard() {
                   alt="Image2"
                   className={styles.logo}
                 ></img>
-                <button>Edit</button>
+                <button className={styles.edit_btn}>Edit</button>
                 <p className={styles.h2}>Wedo Aps</p>
               </section>
             </section>

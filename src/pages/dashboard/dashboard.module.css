@@ -177,6 +177,23 @@
 .newcampaign_btn:hover {
   background-color: #1e5944;
 }
+.edit_btn {
+  padding: 0.5em;
+  margin: 0.5em;
+  background-color: #71a66f;
+  border-radius: 4px;
+  border: none;
+  font-size: 1rem;
+  color: #f3f3f3;
+  font-family: "sofia sans";
+}
+
+.edit_btn:hover {
+  background-color: #1e5944;
+}
+.newcampaign_btn:hover {
+  background-color: #1e5944;
+}
 .profile {
   display: grid;
   grid-template-columns: 1fr 1fr;
