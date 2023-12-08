@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import styles from "./ProfilePage.module.css"; // Import stylingmodulet
+import styles from "./ProfilePage.module.css";
+import Link from "next/link";
 import Menu from "@/components/Menu";
 
 const ProfilePage = () => {
@@ -10,7 +11,6 @@ const ProfilePage = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
 
   const handleSaveProfile = () => {
-    // Implement logic for saving profile information
     console.log("Saving profile information:", {
       companyName,
       cvrNumber,
@@ -29,11 +29,10 @@ const ProfilePage = () => {
 
   return (
     <div>
-      {" "}
       <Menu />
       <div className={styles.profileContainer}>
         <div className={styles.logoContainer}>
-          <img src="/wheel brown.png" alt="Logo" />
+          <img src="/logo1.png" className={styles.logo} alt="Logo" />
         </div>
 
         <div className={styles.profileBox}>
@@ -41,6 +40,7 @@ const ProfilePage = () => {
           <div className={`${styles.formGroup} ${styles.tallInputField}`}>
             <label className={styles.labelText}>Firmanavn:</label>
             <input
+              placeholder="Firmanavn"
               type="text"
               value={companyName}
               onChange={(e) => setCompanyName(e.target.value)}
@@ -51,6 +51,7 @@ const ProfilePage = () => {
           <div className={`${styles.formGroup} ${styles.tallInputField}`}>
             <label className={styles.labelText}>CVR-nummer:</label>
             <input
+              placeholder="12345678"
               type="text"
               value={cvrNumber}
               onChange={(e) => setCvrNumber(e.target.value)}
@@ -61,7 +62,8 @@ const ProfilePage = () => {
           <div className={`${styles.formGroup} ${styles.tallInputField}`}>
             <label className={styles.labelText}>Firma URL:</label>
             <input
-              type="text"
+              placeholder="https://www.example.com"
+              type="link"
               value={companyURL}
               onChange={(e) => setCompanyURL(e.target.value)}
               className={styles.inputField}
@@ -71,7 +73,8 @@ const ProfilePage = () => {
           <div className={`${styles.formGroup} ${styles.tallInputField}`}>
             <label className={styles.labelText}>Forretningsadresse:</label>
             <input
-              type="text"
+              placeholder="Gadevej 1, 1234 By"
+              type="address"
               value={businessAddress}
               onChange={(e) => setBusinessAddress(e.target.value)}
               className={styles.inputField}
@@ -81,16 +84,17 @@ const ProfilePage = () => {
           <div className={`${styles.formGroup} ${styles.tallInputField}`}>
             <label className={styles.labelText}>Telefonnummer:</label>
             <input
-              type="text"
+              placeholder="+45 XX XX XX XX"
+              type="phone"
               value={phoneNumber}
               onChange={(e) => setPhoneNumber(e.target.value)}
               className={styles.inputField}
             />
           </div>
 
-          <button className={styles.saveProfileButton} onClick={handleSaveProfile}>
+          <Link href="/login" className={styles.button} onClick={handleSaveProfile}>
             Gem Profil
-          </button>
+          </Link>
         </div>
       </div>
     </div>
