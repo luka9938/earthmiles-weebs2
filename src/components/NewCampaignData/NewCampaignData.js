@@ -5,6 +5,8 @@ const NewCampaignData = () => {
   const [formData, setFormData] = useState({
     name: "",
     description: "",
+    startDate: "",
+    endDate: "",
     price: "",
     quantity: "",
     discount: "",
@@ -27,7 +29,7 @@ const NewCampaignData = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     router.push(
-      `/campaigns?name=${formData.name}&description=${formData.description}&price=${formData.price}&quantity=${formData.quantity}&discount=${formData.discount}&commission=${formData.commission}&redemption=${formData.redemption}&link=${formData.link}`
+      `/campaigns?name=${formData.name}&description=${formData.description}&date=${formData.date}&price=${formData.price}&quantity=${formData.quantity}&discount=${formData.discount}&commission=${formData.commission}&redemption=${formData.redemption}&link=${formData.link}`
     );
   };
 
@@ -36,8 +38,9 @@ const NewCampaignData = () => {
       <fieldset className={styles.fieldset}>
         <legend className={styles.h3}>Campaign Details</legend>
         <label className={styles.label}>
-          Campaign headline
+          Kampagneoverskrift
           <input
+            placeholder="Kampagneoverskrift"
             className={styles.input}
             type="text"
             name="name"
@@ -46,12 +49,35 @@ const NewCampaignData = () => {
           />
         </label>
         <label className={styles.label}>
-          Description
+          Beskrivelse
           <input
+            placeholder="Beskrivelse"
             className={styles.input}
             type="text"
             name="description"
             value={formData.description}
+            onChange={handleChange}
+          />
+        </label>
+        <label className={styles.label}>
+          start dato
+          <input
+            placeholder="Beskrivelse"
+            className={styles.input}
+            type="date"
+            name="startDate"
+            value={formData.startDate}
+            onChange={handleChange}
+          />
+        </label>
+        <label className={styles.label}>
+          Slut dato
+          <input
+            placeholder="Beskrivelse"
+            className={styles.input}
+            type="date"
+            name="endDate"
+            value={formData.endDate}
             onChange={handleChange}
           />
         </label>
@@ -61,8 +87,9 @@ const NewCampaignData = () => {
         <label className={styles.label}>
           Original price
           <input
+            placeholder="Beskrivelse"
             className={styles.input}
-            type="text"
+            type="number"
             name="price"
             value={formData.price}
             onChange={handleChange}
@@ -71,8 +98,9 @@ const NewCampaignData = () => {
         <label className={styles.label}>
           Quantity offered
           <input
+            placeholder="Beskrivelse"
             className={styles.input}
-            type="text"
+            type="number"
             name="quantity"
             value={formData.quantity}
             onChange={handleChange}
@@ -81,8 +109,9 @@ const NewCampaignData = () => {
         <label className={styles.label}>
           Discount value (%)
           <input
+            placeholder="Beskrivelse"
             className={styles.input}
-            type="text"
+            type="number"
             name="discount"
             value={formData.discount}
             onChange={handleChange}
@@ -91,8 +120,9 @@ const NewCampaignData = () => {
         <label className={styles.label}>
           Potential EM commission (10%)
           <input
+            placeholder="Beskrivelse"
             className={styles.input}
-            type="text"
+            type="number"
             name="commission"
             value={formData.commission}
             onChange={handleChange}
@@ -103,18 +133,13 @@ const NewCampaignData = () => {
       <fieldset className={styles.fieldset}>
         <legend className={styles.h3}>Redemption Type</legend>
         <label className={styles.label}>
-          OR code (we generate one for you)
+          QR code (we generate one for you)
           <div className={styles.checkbox}>
-            <input
-              className={styles.input}
-              type="text"
-              name="link"
-              value={formData.link}
-            />
+            <input className={styles.input} type="text" name="link" value={formData.link} />
             <input
               type="radio"
               name="redemption"
-              value="Option 1"
+              value="QR Code"
               checked={formData.redemption === "Option 1"}
               onChange={handleChange}
             />
@@ -123,12 +148,7 @@ const NewCampaignData = () => {
         <label className={styles.label}>
           Direct link to workshop
           <div className={styles.checkbox}>
-            <input
-              className={styles.input}
-              type="text"
-              name="link"
-              value={formData.link}
-            />
+            <input className={styles.input} type="text" name="link" value={formData.link} />
             <input
               type="radio"
               name="redemption"
@@ -141,12 +161,7 @@ const NewCampaignData = () => {
         <label className={styles.label}>
           Promo code (CSV, Text File etc.)
           <div className={styles.checkbox}>
-            <input
-              className={styles.input}
-              type="text"
-              name="link"
-              value={formData.link}
-            />
+            <input className={styles.input} type="text" name="link" value={formData.link} />
             <input
               type="radio"
               name="redemption"
