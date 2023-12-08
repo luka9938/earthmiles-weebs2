@@ -1,7 +1,6 @@
 .h2 {
   color: #604a3a;
-  font-size: 3rem;
-  padding: 0.5em 0;
+  font-size: 2.5rem;
   font-weight: bold;
 }
 
@@ -102,11 +101,10 @@
 
 .campaigns {
   display: flex;
-  padding: 2em;
-  gap: 3em;
+  gap: 2em;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
+  align-items: flex-end;
 }
 
 .active {
@@ -116,26 +114,22 @@
   height: 12em;
   width: 100%;
   border-radius: 16px;
-  background-image: url("/image30.png");
-  background-size: cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("/image30.png") center/cover;
 }
 
 .campaign_text {
-  padding: 1em 0;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  border-radius: 16px;
-  color: #fff;
   font-size: 3rem;
 }
 .archive {
   display: flex;
+  align-items: center;
+  justify-content: center;
   height: 12em;
   width: 100%;
   border-radius: 16px;
-  background-image: url("/image1.png");
-  background-size: cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("/image1.png") center/cover;
 }
 .circle_container {
   position: relative;
@@ -153,22 +147,21 @@
 }
 
 .logo {
-  background-size: contain;
-  height: 100%;
-  width: 100%;
-  background-repeat: no-repeat;
+  display: flex;
+  width: 60%;
   margin: auto;
+  text-align: center;
 }
 
 .newcampaign_btn {
   display: flex;
   padding: 1em;
+  margin: 1em;
   gap: 3em;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
   background-color: #71a66f;
-  margin: 0 1em 0 1em;
   border-radius: 16px;
   font-size: 2rem;
 }

@@ -94,9 +94,21 @@ export default function Dashboard() {
             <section className={styles.profile}>
               <section>
                 <ul className={styles.ul}>
-                  <li className={styles.li}>Personal Info</li>
-                  <li className={styles.li}>How it works</li>
-                  <li className={styles.li}>Contact support</li>
+                  <li className={styles.li}>
+                    <Link href="./profil" className={styles.p}>
+                      Personal info
+                    </Link>
+                  </li>
+                  <li className={styles.li}>
+                    <Link href="./support" className={styles.p}>
+                      How it works
+                    </Link>
+                  </li>
+                  <li className={styles.li}>
+                    <Link href="./support" className={styles.p}>
+                      Contact support
+                    </Link>
+                  </li>
                   <li className={styles.li}>
                     <Link href="./" className={styles.p}>
                       Log Out
@@ -106,10 +118,11 @@ export default function Dashboard() {
                 </ul>
               </section>
               <section>
-                <div
+                <img
+                  src={"/logo1.png"}
+                  alt="Image2"
                   className={styles.logo}
-                  style={{ backgroundImage: "url(/logo1.png)" }}
-                ></div>
+                ></img>
                 <button>Edit</button>
                 <p className={styles.h2}>Wedo Aps</p>
               </section>

@@ -17,7 +17,7 @@ const Menu = () => {
             <Link className={styles.profile} href="/profil">
               Profile
             </Link>
-            <Link className={styles.dashboard} href="/dashbord">
+            <Link className={styles.dashboard} href="/dashboard">
               Support
             </Link>
             <Link className={styles.faq} href="/#">
