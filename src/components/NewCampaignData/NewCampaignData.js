@@ -87,7 +87,7 @@ const NewCampaignData = () => {
         <label className={styles.label}>
           Original price
           <input
-            placeholder="Beskrivelse"
+            placeholder="DKK"
             className={styles.input}
             type="number"
             name="price"
@@ -98,7 +98,7 @@ const NewCampaignData = () => {
         <label className={styles.label}>
           Quantity offered
           <input
-            placeholder="Beskrivelse"
+            placeholder="DKK"
             className={styles.input}
             type="number"
             name="quantity"
@@ -109,7 +109,7 @@ const NewCampaignData = () => {
         <label className={styles.label}>
           Discount value (%)
           <input
-            placeholder="Beskrivelse"
+            placeholder="DKK"
             className={styles.input}
             type="number"
             name="discount"
@@ -120,7 +120,7 @@ const NewCampaignData = () => {
         <label className={styles.label}>
           Potential EM commission (10%)
           <input
-            placeholder="Beskrivelse"
+            placeholder="DKK"
             className={styles.input}
             type="number"
             name="commission"
