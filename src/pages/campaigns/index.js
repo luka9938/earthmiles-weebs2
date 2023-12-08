@@ -27,6 +27,8 @@ export default function Campaigns() {
   const {
     name,
     description,
+    startDate,
+    endDate,
     price,
     quantity,
     discount,
@@ -75,6 +77,7 @@ export default function Campaigns() {
             {popupContent === "Kampagne 1" && (
               <>
                 <h1 className={styles.h1}>Kampagne 1</h1>
+                <p className={styles.p}>2023-12-12 / 2024-01-12</p>
                 <h2 className={styles.h2}>50% på din entré</h2>
                 <section>
                   <div className={styles.earnings}>
@@ -109,6 +112,9 @@ export default function Campaigns() {
             {popupContent === router.query.name && (
               <>
                 <h1 className={styles.h1}>{name}</h1>
+                <p className={styles.p}>
+                  {startDate} / {endDate}
+                </p>
                 <h2 className={styles.h2}>{description}</h2>
                 <section>
                   <div className={styles.earnings}>

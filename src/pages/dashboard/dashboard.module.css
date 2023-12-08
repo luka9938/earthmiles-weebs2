@@ -104,32 +104,40 @@
   gap: 2em;
   flex-direction: column;
   align-items: center;
-  align-items: flex-end;
-}
-
-.active {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 12em;
-  width: 100%;
-  border-radius: 16px;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("/image30.png") center/cover;
 }
 
 .campaign_text {
   font-size: 3rem;
 }
-.archive {
+.campaign_btn {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 12em;
   width: 100%;
   border-radius: 16px;
+}
+
+.campaign_btn:hover {
+  animation: zoom 1s ease-in-out;
+  animation-fill-mode: both;
+}
+
+@keyframes zoom {
+  0% {
+    background-size: 100%;
+  }
+  100% {
+    background-size: 125%;
+  }
+}
+.active {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("/image1.png") center/cover;
+    url("/image42.png") center/cover;
+}
+.archive {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("/image43.png") center/cover;
 }
 .circle_container {
   position: relative;

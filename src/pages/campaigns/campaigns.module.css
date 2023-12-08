@@ -85,12 +85,25 @@
   height: 12em;
   width: 100%;
   border-radius: 16px;
-  background-image: url("/image30.png");
+  background-image: url("/image44.png");
   background-size: cover;
-  padding: 1em;
-  border: none;
   padding: 0;
+  border: none;
   margin-bottom: 2em;
+}
+
+.campaign:hover {
+  animation: zoom 1s ease-in-out;
+  animation-fill-mode: both;
+}
+
+@keyframes zoom {
+  0% {
+    background-size: 100%;
+  }
+  100% {
+    background-size: 125%;
+  }
 }
 
 .selected {
@@ -112,4 +125,8 @@
 
 .campaign_container {
   padding-top: 2em;
+  display: flex;
+  gap: 2em;
+  flex-direction: column;
+  align-items: center;
 }

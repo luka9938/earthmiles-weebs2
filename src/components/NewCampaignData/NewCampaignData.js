@@ -29,7 +29,7 @@ const NewCampaignData = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     router.push(
-      `/campaigns?name=${formData.name}&description=${formData.description}&date=${formData.date}&price=${formData.price}&quantity=${formData.quantity}&discount=${formData.discount}&commission=${formData.commission}&redemption=${formData.redemption}&link=${formData.link}`
+      `/campaigns?name=${formData.name}&description=${formData.description}&startDate=${formData.startDate}&endDate=${formData.endDate}&price=${formData.price}&quantity=${formData.quantity}&discount=${formData.discount}&commission=${formData.commission}&redemption=${formData.redemption}&link=${formData.link}`
     );
   };
 
@@ -135,12 +135,17 @@ const NewCampaignData = () => {
         <label className={styles.label}>
           QR code (we generate one for you)
           <div className={styles.checkbox}>
-            <input className={styles.input} type="text" name="link" value={formData.link} />
+            <input
+              className={styles.input}
+              type="text"
+              name="link"
+              value={formData.link}
+            />
             <input
               type="radio"
               name="redemption"
               value="QR Code"
-              checked={formData.redemption === "Option 1"}
+              checked={formData.redemption === "QR Code"}
               onChange={handleChange}
             />
           </div>
@@ -148,12 +153,17 @@ const NewCampaignData = () => {
         <label className={styles.label}>
           Direct link to workshop
           <div className={styles.checkbox}>
-            <input className={styles.input} type="text" name="link" value={formData.link} />
+            <input
+              className={styles.input}
+              type="text"
+              name="link"
+              value={formData.link}
+            />
             <input
               type="radio"
               name="redemption"
-              value="Option 2"
-              checked={formData.redemption === "Option 2"}
+              value="Direct link"
+              checked={formData.redemption === "Direct link"}
               onChange={handleChange}
             />
           </div>
@@ -161,12 +171,17 @@ const NewCampaignData = () => {
         <label className={styles.label}>
           Promo code (CSV, Text File etc.)
           <div className={styles.checkbox}>
-            <input className={styles.input} type="text" name="link" value={formData.link} />
+            <input
+              className={styles.input}
+              type="text"
+              name="link"
+              value={formData.link}
+            />
             <input
               type="radio"
               name="redemption"
-              value="Option 3"
-              checked={formData.redemption === "Option 3"}
+              value="Promo code"
+              checked={formData.redemption === "Promo code"}
               onChange={handleChange}
             />
           </div>

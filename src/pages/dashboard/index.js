@@ -54,12 +54,18 @@ export default function Dashboard() {
                   </div>
                 </div>
                 <div className={styles.campaigns}>
-                  <Link href="./campaigns" className={styles.active}>
+                  <Link
+                    href="./campaigns"
+                    className={`${styles.campaign_btn} ${styles.active}`}
+                  >
                     <span className={styles.campaign_text}>
                       Active <br />1
                     </span>
                   </Link>
-                  <Link href="./campaigns" className={styles.archive}>
+                  <Link
+                    href="./campaigns"
+                    className={`${styles.campaign_btn} ${styles.archive}`}
+                  >
                     <span className={styles.campaign_text}>
                       Archived <br />4
                     </span>
