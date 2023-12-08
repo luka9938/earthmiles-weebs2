@@ -31,6 +31,8 @@
   flex-direction: column;
   color: #604a3a;
   font-family: "Sofia Sans", sans-serif;
+  font-weight: bold;
+  gap: 5px;
 }
 
 .input {

@@ -1,12 +1,13 @@
 .homeBody {
   background-size: cover;
   background-position: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("/tog2.jpg") center/cover fixed;
 }
 
 .homeBodyShadow {
   background-size: cover;
   background-position: center;
-  /* background-color: rgba(0, 0, 0, 0.5); */
   color: #fff;
   min-height: 100vh;
   height: auto;
