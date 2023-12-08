@@ -118,10 +118,11 @@ export default function Dashboard() {
                 </ul>
               </section>
               <section>
-                <div
+                <img
+                  src={"/logo1.png"}
+                  alt="Image2"
                   className={styles.logo}
-                  style={{ backgroundImage: "url(/logo1.png)" }}
-                ></div>
+                ></img>
                 <button>Edit</button>
                 <p className={styles.h2}>Wedo Aps</p>
               </section>
