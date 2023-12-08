@@ -1,7 +1,15 @@
 .bodyClass {
   background: linear-gradient(rgba(30, 89, 68, 0.7), rgba(30, 89, 68, 0.7)),
     url("/placeholder1.jpg") center/cover fixed;
-  margin: 0; /* Reset default body margin */
+  margin: 0;
+}
+
+.logo {
+  display: flex;
+  width: 60%;
+  margin: auto;
+  text-align: center;
+  animation: spin 10s linear infinite;
 }
 
 .profileContainer {
@@ -16,7 +24,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #604a3a; /* Brown text color */
+  color: #604a3a;
 }
 
 .logoContainer {
@@ -34,7 +42,7 @@
 }
 
 .profileTitle {
-  color: #604a3a; /* Brown text color */
+  color: #604a3a;
   margin-bottom: 20px;
 }
 
@@ -45,28 +53,61 @@
 }
 
 .labelText {
-  font-size: 14px;
-  margin-bottom: 5px;
-  color: #604a3a; /* Brown text color */
+  font-size: 18px;
+  font-weight: bold;
+  color: #604a3a;
 }
 .inputField {
   width: 100%;
-  padding: 12px; /* Adjusted padding for increased height */
+  padding: 12px;
   margin-top: 5px;
+  padding: 14px;
+  outline: none;
+  border: 2px solid #333;
+  background-color: rgba(230, 230, 230, 0.6);
+  font-size: 1.1rem;
+  margin-top: 8px;
+  transition: 0.3s;
   box-sizing: border-box;
+  margin-bottom: 5px;
 }
 
-.saveProfileButton {
+.inputField:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.inputField:focus {
+  background-color: #fff;
+  border: 2px solid #72bf6f;
+}
+
+.button {
   width: 100%;
-  padding: 15px;
   border: none;
-  border-radius: 4px;
+  color: white;
+  font-size: 1.1rem;
+  background-color: #1e593d;
+  padding: 15px 32px;
+  display: inline-block;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  background-color: #71a66f; /* Brown button color */
-  color: #f2f2f2;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  margin: -0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
-.saveProfileButton:hover {
-  background-color: #1e5944; /* Darker brown button color on hover */
+.button:hover {
+  color: white;
+  background-color: #72bf6f;
+  transform: scale(1.05);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

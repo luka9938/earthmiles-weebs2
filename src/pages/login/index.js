@@ -41,10 +41,7 @@ const LoginPage = () => {
 
       if (error || !data) {
         setErrorMessage("Ugyldige loginoplysninger");
-        console.error(
-          "Failed to login:",
-          error ? error.message : "Bruger ikke fundet"
-        );
+        console.error("Failed to login:", error ? error.message : "Bruger ikke fundet");
       } else {
         console.log("Login successful!");
         setIsUserLoggedIn(true);
@@ -80,7 +77,7 @@ const LoginPage = () => {
 
   return (
     <div>
-      <Menu /> {/* Add the Menu component here */}
+      <Menu />
       <div className={styles.loginContainer}>
         <div className={styles.title}>
           <h1>Earth Miles</h1>
