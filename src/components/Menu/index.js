@@ -7,7 +7,7 @@ const Menu = () => {
     <div className={styles.menu}>
       <div className={styles.logo}>
         <Link href="/">
-          <img src="/logo1.png" alt="logo"></img>
+          <img src="/logowhite.png" alt="logo"></img>
         </Link>
       </div>
       <div className={styles.links}>
