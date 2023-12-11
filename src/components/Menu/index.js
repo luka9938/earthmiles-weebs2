@@ -15,7 +15,7 @@ const Menu = () => {
           <button className={styles.dropbutten}>Menu</button>
           <div className={styles.dropdowncontent}>
             <Link className={styles.profile} href="/profil">
-              Profile
+              Profil
             </Link>
             <Link className={styles.dashboard} href="/dashboard">
               Support
