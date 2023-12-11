@@ -80,3 +80,7 @@
   background-color: #72bf6f;
   transform: scale(1.05);
 }
+
+.radio {
+  opacity: 0;
+}

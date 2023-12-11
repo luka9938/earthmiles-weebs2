@@ -25,7 +25,8 @@
 }
 
 .logo:hover img {
-  transform: scale(1.5);
+  animation: spin 1s;
+  animation-fill-mode: both;
 }
 
 .menuitem {
@@ -116,4 +117,13 @@
 
 .dropdown:hover .dropdowncontent {
   display: block;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg) scale(1);
+  }
+  to {
+    transform: rotate(360deg) scale(1.5);
+  }
 }
