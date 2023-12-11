@@ -14,13 +14,16 @@ const Menu = () => {
         <div className={styles.dropdown}>
           <button className={styles.dropbutten}>Menu</button>
           <div className={styles.dropdowncontent}>
-            <Link className={styles.profile} href="/profil">
+            <Link className={styles.menuitem} href="/profil">
               Profil
             </Link>
-            <Link className={styles.dashboard} href="/support">
+            <Link className={styles.menuitem} href="/dashboard">
+              Dashboard
+            </Link>
+            <Link className={styles.menuitem} href="/support">
               Support
             </Link>
-            <Link className={styles.faq} href="/fag">
+            <Link className={styles.menuitem} href="/faq">
               FAQ
             </Link>
           </div>

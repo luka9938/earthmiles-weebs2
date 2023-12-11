@@ -11,15 +11,15 @@ export default function NewCampaign() {
           <Menu />
           <div className={styles.loginContainer}>
             <div className={styles.title}>
-              <h1>Contact & Support</h1>
+              <h1>Kontakt & support</h1>
             </div>
             <div className={styles.subtitle}>
-              <h3>Want to learn more or have any questions?</h3>
-              <h3>We're here for you!</h3>
+              <h3>Vil du vide mere eller har du spørgsmål?</h3>
+              <h3>Vi er her for dig!</h3>
             </div>
-            <p className={styles.p}>email us on hej@earthmiles.app</p>
+            <p className={styles.p}>Email os på hej@earthmiles.app</p>
             <p className={styles.p}>Made in Copenhagen ❤️🇩🇰</p>
-            <p className={styles.p}>Follow the journey</p>
+            <p className={styles.p}>Følg rejsen</p>
             <ul className={styles.ul}>
               <li className={styles.li}>
                 <Link
@@ -38,18 +38,12 @@ export default function NewCampaign() {
                 </Link>
               </li>
               <li className={styles.li}>
-                <Link
-                  href="https://www.instagram.com/earthmiles.app/"
-                  className={styles.p}
-                >
+                <Link href="https://www.instagram.com/earthmiles.app/" className={styles.p}>
                   Instagram
                 </Link>
               </li>
               <li className={styles.li}>
-                <Link
-                  href="https://www.instagram.com/earthmiles.app/"
-                  className={styles.p}
-                >
+                <Link href="https://www.instagram.com/earthmiles.app/" className={styles.p}>
                   TikTok
                 </Link>
               </li>

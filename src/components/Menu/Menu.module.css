@@ -28,17 +28,11 @@
   transform: scale(1.5);
 }
 
-.home,
-.profile,
-.dashboard,
-.faq {
+.menuitem {
   transition: 0.2s;
 }
 
-.home:hover,
-.profile:hover,
-.dashboard:hover,
-.faq:hover {
+.menuitem:hover {
   transform: scale(1.2);
 }
 
