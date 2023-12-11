@@ -121,7 +121,7 @@ export default function Dashboard() {
                       Log ud
                     </Link>
                   </li>
-                  <li className={styles.li}>Billing and invoices</li>
+                  <li className={styles.li}>Regner & faktura</li>
                 </ul>
               </section>
               <section>
