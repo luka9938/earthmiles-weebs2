@@ -6,14 +6,16 @@ import Menu from "@/components/Menu";
 export default function NewCampaign() {
   return (
     <>
-      <Menu />
       <main className={styles.background}>
-        <article className={styles.container}>
-          <div className={styles.headline}>
-            <h1 className={styles.h1}>Create campaign</h1>
-          </div>
-          <NewCampaignData />
-        </article>
+        <div className={styles.background_green}>
+          <Menu />
+          <article className={styles.container}>
+            <div className={styles.headline}>
+              <h1 className={styles.h1}>Create campaign</h1>
+            </div>
+            <NewCampaignData />
+          </article>
+        </div>
       </main>
     </>
   );
