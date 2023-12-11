@@ -113,7 +113,7 @@ export default function Dashboard() {
                   </li>
                   <li className={styles.li}>
                     <Link href="./support" className={styles.p}>
-                      Kontact support
+                      Kontakt support
                     </Link>
                   </li>
                   <li className={styles.li}>
