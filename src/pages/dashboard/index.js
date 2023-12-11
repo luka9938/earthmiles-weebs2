@@ -42,14 +42,14 @@ export default function Dashboard() {
           <article className={styles.big_element}>
             {timeRemaining === 0 ? (
               <>
-                <h3 className={styles.h3}>Your Dashboard</h3>
+                <h3 className={styles.h3}>Dashboard</h3>
                 <div className={styles.earnings}>
                   <div>
-                    <p className={styles.h4}>Total sales from all campaigns</p>
+                    <p className={styles.h4}>Salg fra alle kampagner</p>
                     <h2 className={styles.h2}>110 982 DKK</h2>
                   </div>
                   <div>
-                    <p className={styles.h4}>Redeemed discounts</p>
+                    <p className={styles.h4}>indløste rabatter</p>
                     <h2 className={styles.h2}>186/200</h2>
                   </div>
                 </div>
@@ -59,7 +59,7 @@ export default function Dashboard() {
                     className={`${styles.campaign_btn} ${styles.active}`}
                   >
                     <span className={styles.campaign_text}>
-                      Active <br />1
+                      Aktive <br />1
                     </span>
                   </Link>
                   <Link
@@ -67,7 +67,7 @@ export default function Dashboard() {
                     className={`${styles.campaign_btn} ${styles.archive}`}
                   >
                     <span className={styles.campaign_text}>
-                      Archived <br />4
+                      Arkiveret <br />4
                     </span>
                   </Link>
                 </div>
@@ -82,27 +82,28 @@ export default function Dashboard() {
                 </div>
                 <div className={styles.verifying_container}>
                   <h2 className={styles.h2}>
-                    Hold on tight while we are verifying your business
+                    Bliv hængene mens vi godkender din forretning
                   </h2>
                   <p className={styles.p}>
-                    You'll be notified via Email when it has been reviewed; this
-                    can take up to {getFormattedTime()}.
+                    Du vil blive notifieret gennem email, når din anmeldelse er
+                    blivet læst igennem; Dette kan tage op til{" "}
+                    {getFormattedTime()}
                   </p>
                   <p className={styles.p}>
-                    In the meantime, why not start creating your first campaign?
+                    I mellemtiden, hvorfor starte du ikke din første kampagne?
                   </p>
                 </div>
               </>
             )}
           </article>
           <article className={styles.small_element1}>
-            <h3 className={styles.h3}>Your Earth Miles Partner Profile</h3>
+            <h3 className={styles.h3}>Din Partner Profil</h3>
             <section className={styles.profile}>
               <section>
                 <ul className={styles.ul}>
                   <li className={styles.li}>
                     <Link href="./profil" className={styles.p}>
-                      Personal info
+                      Personlig information
                     </Link>
                   </li>
                   <li className={styles.li}>
@@ -112,12 +113,12 @@ export default function Dashboard() {
                   </li>
                   <li className={styles.li}>
                     <Link href="./support" className={styles.p}>
-                      Contact support
+                      Kontact support
                     </Link>
                   </li>
                   <li className={styles.li}>
                     <Link href="./" className={styles.p}>
-                      Log Out
+                      Log ud
                     </Link>
                   </li>
                   <li className={styles.li}>Billing and invoices</li>
@@ -129,16 +130,16 @@ export default function Dashboard() {
                   alt="Image2"
                   className={styles.logo}
                 ></img>
-                <button className={styles.edit_btn}>Edit</button>
+                <button className={styles.edit_btn}>Rediger</button>
                 <p className={styles.h2}>Wedo Aps</p>
               </section>
             </section>
           </article>
           <article className={styles.small_element2}>
-            <h2 className={styles.h2}>Want to try something new?</h2>
+            <h2 className={styles.h2}>Vil du prøve noget nyt?</h2>
             <Link href="./newcampaign">
               <span className={styles.newcampaign_btn}>
-                Start a new campaign here
+                Start en ny kampagne her
               </span>
             </Link>
           </article>
