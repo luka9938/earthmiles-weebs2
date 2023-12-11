@@ -29,7 +29,11 @@ const App = () => {
         </div>
 
         <div className={styles.imageContainer}>
-          <img src={"/image30.png"} alt="Image2" className={styles.leftImage2}></img>
+          <img
+            src={"/image30.png"}
+            alt="Image2"
+            className={styles.leftImage2}
+          ></img>
         </div>
         <div className={styles.homeText}>
           <h1>
@@ -38,10 +42,12 @@ const App = () => {
             for partner
           </h1>
           <p>
-            join Earth miles og gør en forskel for <span className={styles.span}>miljøet!</span>
+            Bliv en del af Earth miles og gør en forskel for{" "}
+            <span className={styles.span}>miljøet!</span>
             <br />
             Promover din virksomhed til de tusindvis af rejsende,
-            <br /> der hver dag bruger <span className={styles.span}>bæredygtig</span> transport.
+            <br /> der hver dag bruger{" "}
+            <span className={styles.span}>bæredygtig</span> transport.
           </p>
         </div>
         <div className={styles.buttonContainer}>
