@@ -106,8 +106,8 @@ export default function Dashboard() {
                     </Link>
                   </li>
                   <li className={styles.li}>
-                    <Link href="./support" className={styles.p}>
-                      How it works
+                    <Link href="./faq" className={styles.p}>
+                      FAQ
                     </Link>
                   </li>
                   <li className={styles.li}>
