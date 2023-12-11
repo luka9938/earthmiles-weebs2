@@ -85,12 +85,12 @@ export default function Dashboard() {
                     Bliv hængende mens vi godkender din forretning
                   </h2>
                   <p className={styles.p}>
-                    Du vil blive notifieret gennem email, når din anmeldelse er
-                    blivet læst igennem; Dette kan tage op til{" "}
+                    Du vil blive notificeret gennem email, når din ansøgning er
+                    blevet læst igennem; Dette kan tage op til{" "}
                     {getFormattedTime()}
                   </p>
                   <p className={styles.p}>
-                    I mellemtiden, hvorfor starte du ikke din første kampagne?
+                    I mellemtiden, hvorfor starter du ikke din første kampagne?
                   </p>
                 </div>
               </>
