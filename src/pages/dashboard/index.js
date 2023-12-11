@@ -82,7 +82,7 @@ export default function Dashboard() {
                 </div>
                 <div className={styles.verifying_container}>
                   <h2 className={styles.h2}>
-                    Bliv hængene mens vi godkender din forretning
+                    Bliv hængende mens vi godkender din forretning
                   </h2>
                   <p className={styles.p}>
                     Du vil blive notifieret gennem email, når din anmeldelse er
