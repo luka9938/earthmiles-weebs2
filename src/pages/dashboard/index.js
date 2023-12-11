@@ -49,7 +49,7 @@ export default function Dashboard() {
                     <h2 className={styles.h2}>110 982 DKK</h2>
                   </div>
                   <div>
-                    <p className={styles.h4}>indløste rabatter</p>
+                    <p className={styles.h4}>Indløste rabatter</p>
                     <h2 className={styles.h2}>186/200</h2>
                   </div>
                 </div>
@@ -82,15 +82,15 @@ export default function Dashboard() {
                 </div>
                 <div className={styles.verifying_container}>
                   <h2 className={styles.h2}>
-                    Bliv hængene mens vi godkender din forretning
+                    Bliv hængende imens vi godkender din forretning
                   </h2>
                   <p className={styles.p}>
-                    Du vil blive notifieret gennem email, når din anmeldelse er
-                    blivet læst igennem; Dette kan tage op til{" "}
+                    Du vil blive notificeret gennem email, når din ansøgning er
+                    blevet læst igennem; Dette kan tage op til{" "}
                     {getFormattedTime()}
                   </p>
                   <p className={styles.p}>
-                    I mellemtiden, hvorfor starte du ikke din første kampagne?
+                    I mellemtiden, hvorfor starter du ikke din første kampagne?
                   </p>
                 </div>
               </>
@@ -113,7 +113,7 @@ export default function Dashboard() {
                   </li>
                   <li className={styles.li}>
                     <Link href="./support" className={styles.p}>
-                      Kontact support
+                      Kontakt support
                     </Link>
                   </li>
                   <li className={styles.li}>
