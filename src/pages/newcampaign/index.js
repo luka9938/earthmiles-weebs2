@@ -11,7 +11,7 @@ export default function NewCampaign() {
           <Menu />
           <article className={styles.container}>
             <div className={styles.headline}>
-              <h1 className={styles.h1}>Create campaign</h1>
+              <h1 className={styles.h1}>Opret kampagne</h1>
             </div>
             <NewCampaignData />
           </article>

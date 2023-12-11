@@ -36,7 +36,7 @@ const NewCampaignData = () => {
   return (
     <form onSubmit={handleSubmit} className={styles.grid_container}>
       <fieldset className={styles.fieldset}>
-        <legend className={styles.h3}>Campaign Details</legend>
+        <legend className={styles.h3}>Kampagnedetaljer</legend>
         <label className={styles.label}>
           Kampagneoverskrift
           <input
@@ -83,9 +83,9 @@ const NewCampaignData = () => {
         </label>
       </fieldset>
       <fieldset className={styles.fieldset}>
-        <legend className={styles.h3}>Campaign Financials</legend>
+        <legend className={styles.h3}>Kampagneøkonomi</legend>
         <label className={styles.label}>
-          Original price
+          Original pris
           <input
             placeholder="DKK"
             className={styles.input}
@@ -96,7 +96,7 @@ const NewCampaignData = () => {
           />
         </label>
         <label className={styles.label}>
-          Quantity offered
+          Tilbudt mængde
           <input
             placeholder="DKK"
             className={styles.input}
@@ -107,7 +107,7 @@ const NewCampaignData = () => {
           />
         </label>
         <label className={styles.label}>
-          Discount value (%)
+          Rabatværdi (%)
           <input
             placeholder="DKK"
             className={styles.input}
@@ -118,7 +118,7 @@ const NewCampaignData = () => {
           />
         </label>
         <label className={styles.label}>
-          Potential EM commission (10%)
+          Potentiel EM-provision (10%)
           <input
             placeholder="DKK"
             className={styles.input}
@@ -131,16 +131,11 @@ const NewCampaignData = () => {
       </fieldset>
 
       <fieldset className={styles.fieldset}>
-        <legend className={styles.h3}>Redemption Type</legend>
+        <legend className={styles.h3}>Indløsningstype</legend>
         <label className={styles.label}>
-          QR code (we generate one for you)
+          QR-kode (vi genererer en til dig)
           <div className={styles.checkbox}>
-            <input
-              className={styles.input}
-              type="text"
-              name="link"
-              value={formData.link}
-            />
+            <input className={styles.input} type="text" name="link" value={formData.link} />
             <input
               type="radio"
               name="redemption"
@@ -151,14 +146,9 @@ const NewCampaignData = () => {
           </div>
         </label>
         <label className={styles.label}>
-          Direct link to workshop
+          Direkte link til webshop
           <div className={styles.checkbox}>
-            <input
-              className={styles.input}
-              type="text"
-              name="link"
-              value={formData.link}
-            />
+            <input className={styles.input} type="text" name="link" value={formData.link} />
             <input
               type="radio"
               name="redemption"
@@ -169,14 +159,9 @@ const NewCampaignData = () => {
           </div>
         </label>
         <label className={styles.label}>
-          Promo code (CSV, Text File etc.)
+          Kampagnekode (CSV, tekstfil osv.)
           <div className={styles.checkbox}>
-            <input
-              className={styles.input}
-              type="text"
-              name="link"
-              value={formData.link}
-            />
+            <input className={styles.input} type="text" name="link" value={formData.link} />
             <input
               type="radio"
               name="redemption"
@@ -187,7 +172,7 @@ const NewCampaignData = () => {
           </div>
         </label>
         <button className={styles.button} type="submit">
-          Submit
+          Indsend
         </button>
       </fieldset>
     </form>
