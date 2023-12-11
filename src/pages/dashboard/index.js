@@ -49,7 +49,7 @@ export default function Dashboard() {
                     <h2 className={styles.h2}>110 982 DKK</h2>
                   </div>
                   <div>
-                    <p className={styles.h4}>indløste rabatter</p>
+                    <p className={styles.h4}>Indløste rabatter</p>
                     <h2 className={styles.h2}>186/200</h2>
                   </div>
                 </div>
@@ -82,7 +82,7 @@ export default function Dashboard() {
                 </div>
                 <div className={styles.verifying_container}>
                   <h2 className={styles.h2}>
-                    Bliv hængende mens vi godkender din forretning
+                    Bliv hængende imens vi godkender din forretning
                   </h2>
                   <p className={styles.p}>
                     Du vil blive notificeret gennem email, når din ansøgning er
