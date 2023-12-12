@@ -5,7 +5,7 @@ import Menu from "@/components/Menu";
 
 export default function Dashboard() {
   const [content, setContent] = useState("Initial content");
-  const [timeRemaining, setTimeRemaining] = useState(10); // 5 minutes in seconds
+  const [timeRemaining, setTimeRemaining] = useState(10); // 10 seconds
 
   useEffect(() => {
     const timer = setInterval(() => {
