@@ -31,6 +31,14 @@
   animation-fill-mode: both;
 }
 
+.menuitem {
+  transition: 0.2s;
+}
+
+.menuitem:hover {
+  transform: scale(1.2);
+}
+
 .dropdown {
   position: relative;
   display: inline-block;
