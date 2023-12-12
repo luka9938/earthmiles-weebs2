@@ -51,7 +51,7 @@
   margin-top: -30vh;
   opacity: 0;
   animation: introLoad 3s ease-in-out 1s forwards;
-  z-index: 999;
+  z-index: 90;
 }
 
 .leftImage {

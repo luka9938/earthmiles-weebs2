@@ -7,6 +7,8 @@
 
 .links {
   display: flex;
+  height: 4em;
+  margin-right: 1em;
 }
 
 .links a {
@@ -29,20 +31,13 @@
   animation-fill-mode: both;
 }
 
-.menuitem {
-  transition: 0.2s;
-}
-
-.menuitem:hover {
-  transform: scale(1.2);
-}
-
 .dropdown {
   position: relative;
   display: inline-block;
+  z-index: 98;
 }
 
-.dropbutten {
+.dropbutton {
   background-color: #71a66f;
   border: 0 solid;
   box-sizing: border-box;
@@ -52,8 +47,7 @@
   font-weight: 700;
   justify-content: center;
   line-height: 1.75rem;
-  padding: 0.75rem 3.65rem;
-  margin-left: -40px;
+  padding: 0.75rem 2.65rem;
   position: relative;
   text-align: center;
   text-decoration: none #000000 solid;
@@ -67,11 +61,11 @@
   touch-action: manipulation;
 }
 
-.dropbutten:focus {
+.dropbutton:focus {
   outline: 0;
 }
 
-.dropbutten:after {
+.dropbutton:after {
   content: "";
   position: absolute;
   border: 1px solid #f2f2f2;
@@ -81,7 +75,7 @@
   height: calc(100% - 1px);
 }
 
-.dropbutten:hover:after {
+.dropbutton:hover:after {
   bottom: 2px;
   left: 2px;
 }
@@ -89,11 +83,11 @@
 .dropdowncontent {
   display: none;
   position: absolute;
-  margin-left: -37px;
   margin-top: 9px;
   transform: rotate(-2deg);
   background-color: #71a66f;
-  z-index: 1;
+  z-index: 97;
+  margin-left: 4px;
 }
 
 .dropdowncontent:after {
