@@ -27,7 +27,7 @@ const LoginPage = () => {
 
   const userLogin = async () => {
     if (email.trim() === "" || password.trim() === "") {
-      setErrorMessage("Email and password must be filled");
+      setErrorMessage("Email og password skal være udfyldt!");
       return;
     }
 
@@ -41,7 +41,10 @@ const LoginPage = () => {
 
       if (error || !data) {
         setErrorMessage("Ugyldige loginoplysninger");
-        console.error("Failed to login:", error ? error.message : "Bruger ikke fundet");
+        console.error(
+          "Failed to login:",
+          error ? error.message : "Bruger ikke fundet"
+        );
       } else {
         console.log("Login successful!");
         setIsUserLoggedIn(true);
