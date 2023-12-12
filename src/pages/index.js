@@ -39,7 +39,7 @@ const App = () => {
           <h1>
             <span className={styles.span}>Earth Miles</span>
             <br />
-            for partner
+            for partnere
           </h1>
           <p>
             Bliv en del af Earth miles og gør en forskel for{" "}
