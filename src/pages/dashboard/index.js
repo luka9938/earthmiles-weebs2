@@ -4,14 +4,12 @@ import { useState, useEffect } from "react";
 import Menu from "@/components/Menu";
 
 export default function Dashboard() {
-  const [content, setContent] = useState("Initial content");
   const [timeRemaining, setTimeRemaining] = useState(10); // 10 seconds
 
   useEffect(() => {
     const timer = setInterval(() => {
       setTimeRemaining((prevTime) => {
         if (prevTime === 0) {
-          setContent("Updated content after 5 minutes");
           clearInterval(timer);
           return prevTime;
         }
