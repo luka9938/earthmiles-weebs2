@@ -9,18 +9,14 @@ const App = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    // Check if the screen width is below 768 pixels
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
     };
 
-    // Initial check on mount
     handleResize();
 
-    // Listen for resize events
     window.addEventListener("resize", handleResize);
 
-    // Cleanup event listener on component unmount
     return () => {
       window.removeEventListener("resize", handleResize);
     };
@@ -38,7 +34,6 @@ const App = () => {
     <div className={styles.homeBody}>
       <Menu />
       <div className={styles.homeBodyShadow}>
-        {/* Left image container */}
         <div className={styles.imageContainer}>
           <img
             src={leftImageSource}
@@ -48,16 +43,10 @@ const App = () => {
           />
         </div>
 
-        {/* Second image container */}
         <div className={styles.imageContainer}>
-          <img
-            src={"/image30.png"}
-            alt="Image2"
-            className={styles.leftImage2}
-          />
+          <img src={"/image30.png"} alt="Image2" className={styles.leftImage2} />
         </div>
 
-        {/* Text and buttons */}
         <div className={styles.homeText}>
           <h1>
             <span className={styles.span}>Earth Miles</span>
@@ -69,12 +58,10 @@ const App = () => {
             <span className={styles.span}>miljøet!</span>
             <br />
             Promover din virksomhed til de tusindvis af rejsende,
-            <br /> der hver dag bruger{" "}
-            <span className={styles.span}>bæredygtig</span> transport.
+            <br /> der hver dag bruger <span className={styles.span}>bæredygtig</span> transport.
           </p>
         </div>
 
-        {/* Button container */}
         <div className={styles.buttonContainer}>
           <Link href="./createaccount" className={styles.button} role="button">
             Opret en konto
@@ -85,16 +72,15 @@ const App = () => {
           </Link>
         </div>
 
-        {/* Mobile message and download buttons */}
         {isMobile && (
           <div className={styles.mobileMessage}>
             <a
-              href="link_to_app_store"
+              href="https://apps.apple.com/"
               className={styles.downloadButton}
               target="_blank"
               rel="noopener noreferrer"
             >
-              Download on the App Store
+              Download på App Store
             </a>
             <a
               href="link_to_google_play"
@@ -102,7 +88,7 @@ const App = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Download on Google Play
+              Download på Google Play
             </a>
           </div>
         )}
