@@ -83,7 +83,7 @@ const App = () => {
               Download på App Store
             </a>
             <a
-              href="link_to_google_play"
+              href="https://play.google.com/store"
               className={styles.downloadButton}
               target="_blank"
               rel="noopener noreferrer"
