@@ -174,3 +174,95 @@
     padding: 20px;
   }
 }
+@keyframes introLoad {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes moveUpDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 767px) {
+  /* Hide desktop-specific elements on mobile */
+  .imageContainer,
+  .leftImage,
+  .leftImage2,
+  .buttonContainer,
+  .menu {
+    display: none;
+  }
+
+  /* Adjust styles for the button container on mobile */
+  .buttonContainer {
+    margin-left: 20px;
+    margin-top: 10px;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* Add styles for the mobile message and buttons */
+  .mobileMessage {
+    display: block;
+    color: #f2f2f2;
+    padding: 20px;
+    margin-top: 20px;
+  }
+
+  /* Adjusted styles for the buttons */
+  .button,
+  .downloadButton {
+    display: flex;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 13px 20px;
+    border-radius: 5px;
+    outline: 0;
+    border: 1.5px solid #f2f2f2;
+    cursor: pointer;
+    position: relative;
+    background-color: #72bf6f;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+
+  .button:after,
+  .downloadButton:after {
+    content: "";
+    background-color: #71a66f;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    top: 7px;
+    left: 7px;
+    transition: 0.2s;
+  }
+
+  .button:hover:after,
+  .downloadButton:hover:after {
+    background-color: #72bf6f;
+    top: 0px;
+    left: 0px;
+  }
+}

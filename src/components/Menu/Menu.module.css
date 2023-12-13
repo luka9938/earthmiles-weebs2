@@ -129,3 +129,8 @@
     transform: rotate(360deg) scale(1.5);
   }
 }
+@media (max-width: 767px) {
+  .menu {
+    display: none;
+  }
+}
