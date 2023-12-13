@@ -74,19 +74,13 @@ const App = () => {
 
         {isMobile && (
           <div className={styles.mobileMessage}>
-            <a
-              href="https://apps.apple.com/"
-              className={styles.downloadButton}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://apps.apple.com/" className={styles.downloadButton} target="_blank">
               Download på App Store
             </a>
             <a
               href="https://play.google.com/store"
               className={styles.downloadButton}
               target="_blank"
-              rel="noopener noreferrer"
             >
               Download på Google Play
             </a>
