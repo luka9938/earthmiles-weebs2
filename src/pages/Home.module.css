@@ -199,9 +199,7 @@
   }
 }
 
-/* Mobile styles */
 @media (max-width: 767px) {
-  /* Hide desktop-specific elements on mobile */
   .imageContainer,
   .leftImage,
   .leftImage2,
@@ -210,10 +208,36 @@
     display: none;
   }
 
+  .homeText {
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    color: #f2f2f2;
+    padding: 50px;
+    animation: introLoad 3s ease-in-out;
+  }
+
+  .homeText h1 {
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 0.9;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    margin: 0;
+  }
+
+  .homeText p {
+    font-size: 19px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+
   /* Adjust styles for the button container on mobile */
   .buttonContainer {
     margin-left: 20px;
-    margin-top: 10px;
+    margin-top: 50px;
     flex-direction: column;
     gap: 20px;
   }
@@ -223,15 +247,15 @@
     display: block;
     color: #f2f2f2;
     padding: 20px;
-    margin-top: 20px;
+    margin-top: -240px;
   }
 
   /* Adjusted styles for the buttons */
   .button,
   .downloadButton {
     display: flex;
-    width: 100%;
-    font-size: 16px;
+    width: 60%;
+    font-size: 13px;
     font-weight: bold;
     letter-spacing: 1px;
     padding: 13px 20px;
@@ -243,26 +267,6 @@
     background-color: #72bf6f;
     user-select: none;
     -webkit-user-select: none;
-    touch-action: manipulation;
-  }
-
-  .button:after,
-  .downloadButton:after {
-    content: "";
-    background-color: #71a66f;
-    width: 100%;
-    z-index: -1;
-    position: absolute;
-    height: 100%;
-    top: 7px;
-    left: 7px;
-    transition: 0.2s;
-  }
-
-  .button:hover:after,
-  .downloadButton:hover:after {
-    background-color: #72bf6f;
-    top: 0px;
-    left: 0px;
+    margin-bottom: 10px;
   }
 }
