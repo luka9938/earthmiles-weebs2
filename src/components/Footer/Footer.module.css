@@ -37,3 +37,15 @@
 .copyright {
   font-style: italic;
 }
+
+@media (max-width: 767px) {
+  .email {
+    text-decoration: underline;
+    font-size: 0.8rem;
+  }
+
+  .so_me {
+    width: 50vw;
+    padding: 1em;
+  }
+}
